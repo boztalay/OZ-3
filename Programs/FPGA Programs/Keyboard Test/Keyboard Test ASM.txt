@@ -1,0 +1,42 @@
+#This program takes input from a keyboard interface module, then outputs
+#the scan codes to a 7-segment display
+
+#Output pin 11: Acknowledgment signal
+#Input pin 3 : Code ready signal
+
+opin1 14
+noop
+noop
+noop
+addi r1, r0, 1
+oprt r1
+opin0 14 #Back to default of "00" for the LCD data bus
+
+opin0 13 #Set input port to "00" for the keyboard scan code
+opin0 12
+
+lbl START
+	ipchk 3
+	brnp GET_CODE
+	noop
+	noop
+	noop
+	lbl CONTINUE
+	opin1 15
+	opin0 14
+	oprt r1
+	opin0 15
+	jp START
+	noop
+	noop
+	noop
+
+lbl GET_CODE
+	iprt r1
+	opin1 11
+	opin0 11
+	jp CONTINUE
+	noop
+	noop
+	noop
+%

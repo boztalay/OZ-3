@@ -1,0 +1,10 @@
+#Just a simple program used to test basic functions of the processor without
+#using up I/O resources
+
+lbl START
+opin1 0
+jp START
+noop
+noop
+noop
+%

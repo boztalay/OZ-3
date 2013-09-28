@@ -1,0 +1,306 @@
+#This program will store everything typed in a 1 KB buffer in memory and
+#manipulate text and the like through the buffer, instead of the LCD
+#controller.
+
+#####MAIN PROGRAM BEGIN#####
+
+opin1 14
+noop
+noop
+noop
+addi r1, r0, 1
+oprt r1
+opin0 14 #Back to default of "00" for the LCD data bus
+
+opin0 13 #Set input port to "00" for the keyboard scan code
+opin0 12
+
+opin0 10 #Set the R/W pin to 0 forever
+
+#Call the LCD setup subroutine
+
+addi r31, r0, CONT0
+jp SR_LCD_STARTUP
+noop
+noop
+noop
+lbl CONT0
+
+#Load RAM
+addi r1, r0, 97
+strl r1, r0, 1
+noop
+noop
+noop
+addi r1, r0, 98
+strl r1, r0, 2
+noop
+noop
+noop
+addi r1, r0, 99
+strl r1, r0, 3
+noop
+noop
+noop
+addi r1, r0, 100
+strl r1, r0, 4
+noop
+noop
+noop
+addi r1, r0, 101
+strl r1, r0, 5
+noop
+noop
+noop
+addi r1, r0, 102
+strl r1, r0, 6
+noop
+noop
+noop
+addi r1, r0, 103
+strl r1, r0, 7
+noop
+noop
+noop
+addi r1, r0, 104
+strl r1, r0, 8
+noop
+noop
+noop
+addi r1, r0, 105
+strl r1, r0, 9
+noop
+noop
+noop
+addi r1, r0, 106
+strl r1, r0, 10
+noop
+noop
+noop
+addi r1, r0, 107
+strl r1, r0, 11
+noop
+noop
+noop
+addi r1, r0, 108
+strl r1, r0, 12
+noop
+noop
+noop
+addi r1, r0, 109
+strl r1, r0, 13
+noop
+noop
+noop
+addi r1, r0, 110
+strl r1, r0, 14
+noop
+noop
+noop
+addi r1, r0, 111
+strl r1, r0, 15
+noop
+noop
+noop
+addi r1, r0, 112
+strl r1, r0, 16
+noop
+noop
+noop
+
+#Use the subroutine to display it all
+
+addi r30, r0, 0
+addi r29, r0, 0
+addi r31, r0, CONT1
+jp SR_LCD_WRITE_LINE
+noop
+noop
+noop
+lbl CONT1
+
+addi r30, r0, 0
+addi r29, r0, 1
+addi r31, r0, CONT2
+jp SR_LCD_WRITE_LINE
+noop
+noop
+noop
+lbl CONT2
+
+lbl END
+	jp END
+	noop
+	noop
+	noop
+
+#####MAIN PROGRAM END#####
+
+#####SUBROUTINE DEFINITIONS#####
+
+#This subroutine goes through the startup sequence for the
+#LCD screen.
+#Registers used: 29, 30, 28
+#Both erased before and after use
+lbl SR_LCD_STARTUP
+	add r28, r0, r31
+
+	lbl SET_FUNCTION
+		opin0 9 #RS pin to 0
+		opin1 8 #E pin to 1
+		addi r29, r0, 56 #Send the set function, 00111000
+		oprt r29
+		opin0 8 #E pin back to 0
+		
+	#Call SR_WAIT_37US
+	addi r31, r0, SR_LCD_STARTUP_CONT0
+	jp SR_WAIT_37US
+	noop
+	noop
+	noop
+	lbl SR_LCD_STARTUP_CONT0
+	
+	lbl DISPLAY_SET
+		opin0 9 #RS pin to 0
+		opin1 8 #E pin to 1
+		addi r29, r0, 15 #Send the display set function, 00001111
+		oprt r29
+		opin0 8 #E pin back to 0
+	
+	#Call SR_WAIT_37US
+	addi r31, r0, SR_LCD_STARTUP_CONT1
+	jp SR_WAIT_37US
+	noop
+	noop
+	noop
+	lbl SR_LCD_STARTUP_CONT1
+
+	lbl DISPLAY_CLEAR
+		opin0 9 #RS pin to 0
+		opin1 8 #E pin to 1
+		addi r29, r0, 1 #Send the display clear function, 00000001
+		oprt r29
+		opin0 8 #E pin back to 0
+
+	addi r29, r0, 0 #Reset r29
+	addi r30, r0, 2500
+	lbl WAIT_1.52MS
+		addi r29, r29, 1 #Increment r29
+		cp r29, r30
+		brnl WAIT_1.52MS
+		noop
+		noop
+		noop
+
+	addi r29, r0, 0
+	addi r30, r0, 0
+	
+	jp r28, 0
+	noop
+	noop
+	noop
+#End SR_LCD_STARTUP subroutine
+
+#This subroutine waits for approximately 37 microseconds, for use with the LCD screen
+#Uses registers 26 and 27
+lbl SR_WAIT_37US
+	addi r26, r0, 0 #Reset r26
+	addi r27, r0, 75
+	lbl SR_WAIT_37US_WAIT_START
+		addi r26, r26, 1
+		cp r26, r27
+		brnl SR_WAIT_37US_WAIT_START
+		noop
+		noop
+		noop
+	jp r31, 0
+	noop
+	noop
+	noop
+#End SR_WAIT_37US
+
+#This subroutine simply writes a line to the LCD display.
+#Parameters: Start address - r30
+#            Line 1 or 2 - r29 (0/1), r29 also used for storing data
+#r28 is an index for the wait loop
+#r27 is an index for the write loop
+lbl SR_LCD_WRITE_LINE
+	opin0 10 #RW to 0 forever
+	addi r27, r0, 0 #Make sure 27 has been reset
+	
+	#Test r29 for first or second line
+	cpi r29, 1
+	brne SR_LCD_WRITE_LINE_2
+	noop
+	noop
+	noop
+
+	#If it's line one, set the cursor to address 0
+	lbl SR_LCD_WRITE_LINE_1
+		opin0 9 #RS to 0
+		opin1 8 #E to 1
+		addi r1, r0, 128 #Send instruction to set cursor to 0, "10000000"
+		oprt r1
+		opin0 8 #E back to 0
+		jp SR_LCD_WRITE_LINE_LOOP
+		noop
+		noop
+		noop
+
+	#If it's line two, set the cursor to address 64
+	lbl SR_LCD_WRITE_LINE_2
+		opin0 9 #RS to 0
+		opin1 8 #E to 1
+		addi r1, r0, 192 #Send instruction to set cursor to 64, "11000000"
+		oprt r1
+		opin0 8 #E back to 0
+
+	#The loop that does the heavy lifting
+	lbl SR_LCD_WRITE_LINE_LOOP
+		ldl r29, r30, 0 #Get the character out of memory
+		noop
+		noop
+		noop
+
+		#Write the character
+		opin1 9
+		opin1 8
+		oprt r29
+		opin0 8
+		opin0 9
+
+		#Wait for at least 37 microseconds
+		addi r28, r0, 0 #Make sure the index is reset
+		lbl SR_LCD_WRITE_LINE_WAIT
+			addi r28, r28, 1
+			cpi r28, 1000
+			brnl SR_LCD_WRITE_LINE_WAIT
+			noop
+			noop
+			noop
+
+		#Advance the write loop index
+		addi r27, r27, 1
+		#Check the index, exit loop if 17
+		cpi r27, 17
+		brne SR_LCD_WRITE_LINE_END
+		noop
+		noop
+		noop
+
+		#If the index wasn't 16, advance the address register
+		addi r30, r30, 1
+		
+		#Loop back
+		jp SR_LCD_WRITE_LINE_LOOP
+		noop
+		noop
+		noop
+
+	lbl SR_LCD_WRITE_LINE_END
+		jp r31, 0
+		noop
+		noop
+		noop
+#End SR_LCD_WRITE_LINE subroutine
+%

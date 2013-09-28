@@ -1,0 +1,645 @@
+The OZ-3 Assembly Language Assembler
+Ben Oztalay, 2010
+------------------------------------
+
+---------------------
+Running first pass...
+---------------------
+
+Line 13, label: OUTOUTLOOP
+Label Address: 10
+Label Number: 0
+
+Line 15, label: OUTLOOP
+Label Address: 10
+Label Number: 1
+
+Line 19, label: INLOOP
+Label Address: 11
+Label Number: 2
+
+Line 39, label: INEXIT
+Label Address: 25
+Label Number: 3
+
+Line 60, label: OUTLOOPEXIT
+Label Address: 40
+Label Number: 4
+
+Line 78, label: NOPRIME
+Label Address: 53
+Label Number: 5
+
+Line 85, label: END
+Label Address: 58
+Label Number: 6
+
+First pass complete without errors.
+----------------------
+Running second pass...
+----------------------
+
+Line (1): addi r1, r0, 1
+Mnemonic: addi
+Format: i
+Register 1: 1
+Register 2: 0
+Register 3: 
+Binary1: 0010000000100000
+Binary2: 0000000000000001
+
+Line (2): strl r1, r0, 0
+Mnemonic: strl
+Format: i
+Register 1: 1
+Register 2: 0
+Register 3: 
+Binary1: 0110100000100000
+Binary2: 0000000000000000
+
+Line (3): addi r1, r0, 2
+Mnemonic: addi
+Format: i
+Register 1: 1
+Register 2: 0
+Register 3: 
+Binary1: 0010000000100000
+Binary2: 0000000000000010
+
+Line (4): strl r1, r0, 1
+Mnemonic: strl
+Format: i
+Register 1: 1
+Register 2: 0
+Register 3: 
+Binary1: 0110100000100000
+Binary2: 0000000000000001
+
+Line (5): addi r1, r0, 3
+Mnemonic: addi
+Format: i
+Register 1: 1
+Register 2: 0
+Register 3: 
+Binary1: 0010000000100000
+Binary2: 0000000000000011
+
+Line (6): strl r1, r0, 2
+Mnemonic: strl
+Format: i
+Register 1: 1
+Register 2: 0
+Register 3: 
+Binary1: 0110100000100000
+Binary2: 0000000000000010
+
+Line (7): 
+Line (8): 
+Line (9): addi r1, r0, 4
+Mnemonic: addi
+Format: i
+Register 1: 1
+Register 2: 0
+Register 3: 
+Binary1: 0010000000100000
+Binary2: 0000000000000100
+
+Line (10): addi r2, r0, 2
+Mnemonic: addi
+Format: i
+Register 1: 2
+Register 2: 0
+Register 3: 
+Binary1: 0010000001000000
+Binary2: 0000000000000010
+
+Line (11): addi r4, r0, 3 #addr
+Mnemonic: addi
+Format: i
+Register 1: 4
+Register 2: 0
+Register 3: 
+Binary1: 0010000010000000
+Binary2: 0000000000000011
+
+Line (12): 
+Line (13): lbl OUTOUTLOOP
+Mnemonic: lbl
+Label, skipping line
+Line (14): 
+Line (15): 	lbl OUTLOOP
+Mnemonic: lbl
+Label, skipping line
+Line (16): 
+Line (17): 		add r3, r1, r0
+Mnemonic: add
+Format: r
+Register 1: 3
+Register 2: 1
+Register 3: 0
+Binary1: 0011110001100001
+Binary2: 0000000000000000
+
+Line (18): 
+Line (19): 		lbl INLOOP
+Mnemonic: lbl
+Label, skipping line
+Line (20): 
+Line (21): 			sub r3, r3, r2
+Mnemonic: sub
+Format: r
+Register 1: 3
+Register 2: 3
+Register 3: 2
+Binary1: 0011110001100011
+Binary2: 0001000000000001
+
+Line (22): 	
+Line (23): 			brnc INEXIT
+Mnemonic: brnc
+Format: d
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 1000010000000000
+Binary2: 0000000000011001
+
+Line (24): 			noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (25): 			noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (26): 			noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (27): 
+Line (28): 			cpi r3, 0
+Mnemonic: cpi
+Format: c
+Register 1: 
+Register 2: 3
+Register 3: 
+Binary1: 0011010000000011
+Binary2: 0000000000000000
+
+Line (29): 			brne OUTLOOPEXIT
+Mnemonic: brne
+Format: d
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 1000110000000000
+Binary2: 0000000000101000
+
+Line (30): 			noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (31): 			noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (32): 			noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (33): 
+Line (34): 			jp INLOOP
+Mnemonic: jp
+Format: d
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 1001100000000000
+Binary2: 0000000000001011
+
+Line (35): 			noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (36): 			noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (37): 			noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (38): 		
+Line (39): 		lbl INEXIT
+Mnemonic: lbl
+Label, skipping line
+Line (40): 
+Line (41): 		addi r2, r2, 1
+Mnemonic: addi
+Format: i
+Register 1: 2
+Register 2: 2
+Register 3: 
+Binary1: 0010000001000010
+Binary2: 0000000000000001
+
+Line (42): 
+Line (43): 		cp r2, r1
+Mnemonic: cp
+Format: c
+Register 1: 
+Register 2: 2
+Register 3: 1
+Binary1: 0011110000000010
+Binary2: 0000100000000101
+
+Line (44): 		brne OUTLOOPEXIT
+Mnemonic: brne
+Format: d
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 1000110000000000
+Binary2: 0000000000101000
+
+Line (45): 		noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (46): 		noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (47): 		noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (48): 
+Line (49): 		cpi r2, 11
+Mnemonic: cpi
+Format: c
+Register 1: 
+Register 2: 2
+Register 3: 
+Binary1: 0011010000000010
+Binary2: 0000000000001011
+
+Line (50): 		brne OUTLOOPEXIT
+Mnemonic: brne
+Format: d
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 1000110000000000
+Binary2: 0000000000101000
+
+Line (51): 		noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (52): 		noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (53): 		noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (54): 
+Line (55): 		jp OUTLOOP
+Mnemonic: jp
+Format: d
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 1001100000000000
+Binary2: 0000000000001010
+
+Line (56): 		noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (57): 		noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (58): 		noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (59): 
+Line (60): 	lbl OUTLOOPEXIT
+Mnemonic: lbl
+Label, skipping line
+Line (61): 
+Line (62): 	addi r2, r0, 2
+Mnemonic: addi
+Format: i
+Register 1: 2
+Register 2: 0
+Register 3: 
+Binary1: 0010000001000000
+Binary2: 0000000000000010
+
+Line (63): 
+Line (64): 	cpi r3, 0
+Mnemonic: cpi
+Format: c
+Register 1: 
+Register 2: 3
+Register 3: 
+Binary1: 0011010000000011
+Binary2: 0000000000000000
+
+Line (65): 	brne NOPRIME
+Mnemonic: brne
+Format: d
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 1000110000000000
+Binary2: 0000000000110101
+
+Line (66): 	noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (67): 	noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (68): 	noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (69): 	
+Line (70): 	strl r1, r4, 0
+Mnemonic: strl
+Format: i
+Register 1: 1
+Register 2: 4
+Register 3: 
+Binary1: 0110100000100100
+Binary2: 0000000000000000
+
+Line (71): 	addi r4, r4, 1
+Mnemonic: addi
+Format: i
+Register 1: 4
+Register 2: 4
+Register 3: 
+Binary1: 0010000010000100
+Binary2: 0000000000000001
+
+Line (72): 	addi r1, r1, 1
+Mnemonic: addi
+Format: i
+Register 1: 1
+Register 2: 1
+Register 3: 
+Binary1: 0010000000100001
+Binary2: 0000000000000001
+
+Line (73): 	jp OUTOUTLOOP
+Mnemonic: jp
+Format: d
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 1001100000000000
+Binary2: 0000000000001010
+
+Line (74): 	noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (75): 	noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (76): 	noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (77): 
+Line (78): 	lbl NOPRIME
+Mnemonic: lbl
+Label, skipping line
+Line (79): 	addi r1, r1, 1
+Mnemonic: addi
+Format: i
+Register 1: 1
+Register 2: 1
+Register 3: 
+Binary1: 0010000000100001
+Binary2: 0000000000000001
+
+Line (80): 	jp OUTOUTLOOP
+Mnemonic: jp
+Format: d
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 1001100000000000
+Binary2: 0000000000001010
+
+Line (81): 	noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (82): 	noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (83): 	noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (84): 
+Line (85): lbl END
+Mnemonic: lbl
+Label, skipping line
+Line (86): noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (87): jp END
+Mnemonic: jp
+Format: d
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 1001100000000000
+Binary2: 0000000000111010
+
+Line (88): noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (89): noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (90): noop
+Mnemonic: noop
+Format: n
+Register 1: 
+Register 2: 
+Register 3: 
+Binary1: 0000000000000000
+Binary2: 0000000000000000
+
+Line (91): 
+Complete without errors!
+
+WAIEY DRAINKING SAYUNTAYUNA CSHAYUMP CAWZ ITSOOOO CRAYISP (CRAIEOUSYP)

@@ -1,0 +1,1656 @@
+#This program will store everything typed in a 1 KB buffer in memory and
+#manipulate text and the like through the buffer, instead of the LCD
+#controller.
+
+#####MAIN PROGRAM BEGIN#####
+
+opin1 14
+noop
+noop
+noop
+addi r1, r0, 1
+oprt r1
+opin0 14 #Back to default of "00" for the LCD data bus
+
+opin0 13 #Set input port to "00" for the keyboard scan code
+opin0 12
+
+opin0 10 #Set the R/W pin to 0 forever
+
+#Call the LCD setup subroutine
+addi r31, r0, CONT0
+jp SR_LCD_STARTUP
+noop
+noop
+noop
+lbl CONT0
+
+#Reset all of the counters
+addi r1, r0, 0 #Index
+addi r2, r0, 0 #Character count within line
+addi r3, r0, 0 #Line 1 pointer
+addi r4, r0, 16 #Line 2 pointer
+addi r5, r0, 0 #Character address
+addi r6, r0, 0 #Furthest character address
+addi r7, r0, 0 #Line number flag (0 for first line, 1 for second line)
+addi r8, r0, 0 #Index
+addi r9, r0, 0 #Index
+addi r10, r0, 0 #A flag for "display update only"
+addi r11, r0, 0 #Scratch
+
+#Clear the first 32 addresses
+addi r8, r0, 0
+addi r9, r0, 32
+lbl CLEAR_LOOP_START
+	strl r9, r8, 0
+	noop
+	noop
+	noop
+	addi r8, r8, 1
+	cpi r8, 33
+	brnl CLEAR_LOOP_START
+	noop
+	noop
+	noop
+
+lbl MAIN_LOOP
+	#Reset the display update only flag
+	addi r10, r0, 0
+
+	cpi r7, 1
+	brne CURSOR_LINE_2
+	noop
+	noop
+	noop	
+
+	#Set the cursor address if it's on line 1
+	opin0 9
+	opin1 8
+	addi r8, r2, 127
+	oprt r8
+	opin0 8
+	jp SKIP_LINE_2
+	noop
+	noop
+	noop
+
+	#Set the cursor address if it's on line 2
+	lbl CURSOR_LINE_2
+		opin0 9
+		opin1 8
+		addi r8, r2, 191
+		oprt r8
+		opin0 8
+
+	lbl SKIP_LINE_2
+	
+	#Get a character by calling the keyboard subroutine
+	addi r31, r0, CONT1
+	jp SR_KEYBOARD_HANDLE
+	noop
+	noop
+	noop
+	lbl CONT1
+
+	#Check if it's a command instead of a character to display
+
+        #Checks to see if the ASCII code is something to display, or for control
+        lbl CHECK_CODE
+       	 	cpi r30, 17
+       	 	brne ARROWR
+       	 	cpi r30, 18
+       	 	brne ARROWL
+       	 	cpi r30, 19
+       	 	brne ARROWU
+       	 	cpi r30, 20
+	     	brne ARROWD
+        	noop
+        	noop
+        	noop
+        	jp DISPLAY_CHAR
+        	noop	
+       	 	noop
+	      	noop
+
+	##Control button handlers
+	#lbl ESC
+	#lbl BKSP
+	lbl ARROWR
+		#Don't do anything if the user is already at the end of the range
+		addi r11, r3, 32
+		cp r5, r11
+		brne MAIN_LOOP
+		noop
+		noop
+		noop
+	
+		addi r5, r5, 1
+
+		#If the user is on line 1 and at character 16, change line numbers n such
+		cpi r7, 0
+		brne ARROWR_ON_LINE_1
+		noop
+		noop
+		noop
+
+		#If on line 2, just increment the pointer
+		addi r2, r2, 1
+		jp MAIN_LOOP
+		noop
+		noop
+		noop
+
+		lbl ARROWR_ON_LINE_1
+			#If the user is at the end of the line
+			cpi r2, 16
+			brne CHANGE_LINES_1
+			noop
+			noop
+			noop
+
+			#Otherwise, just increment the pointer
+			addi r2, r2, 1
+			jp MAIN_LOOP
+			noop
+			noop
+			noop
+
+			lbl CHANGE_LINES_1
+				addi r7, r0, 1
+				addi r2, r0, 1
+				jp MAIN_LOOP
+				noop
+				noop
+				noop
+		
+	lbl ARROWL
+		#Don't do anything if the user is already at the first character in range
+		addi r11, r3, 1
+		cp r5, r11
+		brne MAIN_LOOP
+		noop
+		noop
+		noop
+
+		subi r5, r5, 1
+		
+		#If the user is on line 2 and at character 0, change line numbers and change the
+		#the character counter
+		cpi r7, 1
+		brne ARROWL_ON_LINE_2
+		noop
+		noop
+		noop
+
+		#If on line one, just subtract one from both pointers
+		subi r2, r2, 1
+		jp MAIN_LOOP
+		noop
+		noop
+		noop
+
+		lbl ARROWL_ON_LINE_2
+			cpi r2, 1
+			brne CHANGE_LINES
+			noop
+			noop
+			noop
+
+			subi r2, r2, 1
+			jp MAIN_LOOP
+			noop
+			noop
+			noop
+
+			lbl CHANGE_LINES
+				addi r2, r0, 16
+				addi r7, r0, 0
+				jp MAIN_LOOP
+				noop
+				noop
+				noop						
+
+	lbl ARROWU
+		#If the user is already at the top line, do nothing
+		cpi r5, 16
+		brnl MAIN_LOOP
+		noop
+		noop
+		noop
+
+		#If the user is on line one, then reduce the line pointers to change lines
+		cpi r7, 0
+		brne ON_LINE_ONE
+		noop
+		noop
+		noop
+		
+		#Otherwise, do this stuff
+			#Set the line number to 0
+			addi r7, r0, 0
+
+			#Subtract 16 from the current character pointer
+			subi r5, r5, 16
+
+			#Go back to the top of the loop
+			jp MAIN_LOOP
+			noop
+			noop
+			noop
+		
+		lbl ON_LINE_ONE
+			#Set the line number to 1
+			addi r7, r0, 1
+			
+			#Reduce the line pointers
+			subi r3, r3, 16
+			subi r4, r4, 16
+			
+			#Set the update only flag
+			addi r10, r0, 1
+
+			#Update lines
+			jp DISPLAY_LINES_ONLY
+			noop
+			noop
+			noop
+
+	lbl ARROWD		
+		#If the user is already at the bottom line, do nothing
+		cpi r5, 1008
+		brng MAIN_LOOP
+		noop
+		noop
+		noop
+
+		#If the user is on line two, then increase the line pointers to change lines
+		cpi r7, 1
+		brne ON_LINE_TWO
+		noop
+		noop
+		noop
+		
+		#Otherwise, do this stuff
+			#Set the line number to 1
+			addi r7, r0, 1
+
+			#Add 16 to the current character pointer
+			addi r5, r5, 16
+
+			#Go back to the top of the loop
+			jp MAIN_LOOP
+			noop
+			noop
+			noop
+		
+		lbl ON_LINE_TWO
+			#Set the line to 0
+			addi r7, r0, 0
+			
+			#Increase the line pointers
+			addi r3, r3, 16
+			addi r4, r4, 16
+
+			#Set the update only flag
+			addi r10, r0, 1	
+
+			#If at the end of the current length, then clear the next 16 characters
+			cp r4, r6
+			brnl DISPLAY_LINES_ONLY
+			noop
+			noop
+			noop
+
+			addi r8, r4, 0  #Starting at the current address plus one
+ 			addi r9, r4, 17 #Clearing characters till 16 past the current address
+			addi r10, r0, 32 #Space ASCII code
+			lbl CLEAR_LOOP_ARROWD
+				strl r10, r8, 0
+				noop
+				noop
+				noop
+				addi r8, r8, 1
+				cp r8, r9
+				brnl CLEAR_LOOP_ARROWD
+				noop
+				noop
+				noop
+
+			#Set the update only flag
+			addi r10, r0, 1				
+
+			#Update lines
+			jp DISPLAY_LINES_ONLY
+			noop
+			noop
+			noop
+
+	#Everything about displaying the character and lines is below here
+	lbl DISPLAY_CHAR
+
+	#If the user has reached the 1 kilobyte limit, go back to the top
+	cpi r5, 1024
+	brng MAIN_LOOP
+	noop
+	noop
+	noop	
+
+	#Store the character
+	strl r30, r5, 0
+	noop
+	noop
+	noop
+
+	lbl DISPLAY_LINES_ONLY #This is used for the up/down arrows and scrolling
+
+	#Display the first and second lines	
+	add  r30, r3, r0
+	addi r29, r0, 0
+	addi r31, r0, CONT2
+	jp SR_LCD_WRITE_LINE
+	noop
+	noop
+	noop
+	lbl CONT2
+
+	#Wait for at least 37 microseconds
+	addi r1, r0, 0 #Make sure the index is reset
+	lbl WAITT
+		addi r1, r1, 1
+		cpi r1, 100
+		brnl WAITT
+		noop
+		noop
+		noop
+
+	add  r30, r4, r0
+	addi r29, r0, 1
+	addi r31, r0, CONT3
+	jp SR_LCD_WRITE_LINE
+	noop
+	noop
+	noop
+	lbl CONT3
+
+	#If it was only supposed to update the display, jump back to the top
+	cpi r10, 1
+	brne MAIN_LOOP
+	noop
+	noop
+	noop
+
+	#Increment the number of characters in the line,
+	#the address of the current character, and, if needed,
+	#the addresses of the lines (registers 3 and 4)
+	addi r5, r5, 1
+	addi r2, r2, 1
+
+	#Update the furthest character address register
+	cp r5, r6
+	brnl DONT_UPDATE_FCAR
+	noop
+	noop
+	noop
+
+	#Update it
+	add r6, r5, r0
+
+	lbl DONT_UPDATE_FCAR
+	
+	#If the line is full, update the line number and, if needed, the line pointers
+	cpi r2, 17
+	brne LINE_NUMBER_UPDATE
+	noop
+	noop
+	noop
+
+	#Otherwise, jump back to the top
+	jp MAIN_LOOP
+	noop
+	noop
+	noop
+
+	#Incrementing the line pointers
+	lbl LINE_NUMBER_UPDATE
+		#If it was the second line that was filled, do all that fun stuff
+		cpi r7, 1
+		brne LINE_POINTERS_UPDATE
+		noop
+		noop
+		noop
+	
+		#Otherwise, reset the counters and the like
+		addi r7, r0, 1
+		addi r2, r0, 1
+		jp MAIN_LOOP
+		noop
+		noop
+		noop	
+	
+		lbl LINE_POINTERS_UPDATE
+			#Line one pointer gets line two
+			add r3, r4, r0
+		
+			#Line two pointer gets plus 16
+			addi r4, r4, 16
+
+			#Also reset the character counter
+			addi r2, r0, 1			
+
+			#Only clear the line if it's a new line
+			cp r5, r6
+			brnl MAIN_LOOP
+			noop
+			noop
+			noop
+
+			#Clear the next line
+			addi r8, r5, 0  #Starting at the current address
+ 			addi r9, r5, 16 #Clearing characters till 16 past the current address
+			addi r10, r0, 32 #Space ASCII code
+			lbl CLEAR_LOOP
+				strl r10, r8, 0
+				noop
+				noop
+				noop
+				addi r8, r8, 1
+				cp r8, r9
+				brnl CLEAR_LOOP
+				noop
+				noop
+				noop
+
+			#Jump to display only to update the screen w/ new lines
+			addi r10, r0, 1
+			jp DISPLAY_LINES_ONLY
+			noop
+			noop
+			noop
+
+#####MAIN PROGRAM END#####
+
+#####SUBROUTINE DEFINITIONS#####
+
+#This subroutine goes through the startup sequence for the
+#LCD screen.
+#Registers used: 29, 30, 28
+#Both erased before and after use
+lbl SR_LCD_STARTUP
+	add r28, r0, r31
+
+	lbl SET_FUNCTION
+		opin0 9 #RS pin to 0
+		opin1 8 #E pin to 1
+		addi r29, r0, 56 #Send the set function, 00111000
+		oprt r29
+		opin0 8 #E pin back to 0
+		
+	#Call SR_WAIT_37US
+	addi r31, r0, SR_LCD_STARTUP_CONT0
+	jp SR_WAIT_37US
+	noop
+	noop
+	noop
+	lbl SR_LCD_STARTUP_CONT0
+	
+	lbl DISPLAY_SET
+		opin0 9 #RS pin to 0
+		opin1 8 #E pin to 1
+		addi r29, r0, 15 #Send the display set function, 00001111
+		oprt r29
+		opin0 8 #E pin back to 0
+	
+	#Call SR_WAIT_37US
+	addi r31, r0, SR_LCD_STARTUP_CONT1
+	jp SR_WAIT_37US
+	noop
+	noop
+	noop
+	lbl SR_LCD_STARTUP_CONT1
+
+	lbl DISPLAY_CLEAR
+		opin0 9 #RS pin to 0
+		opin1 8 #E pin to 1
+		addi r29, r0, 1 #Send the display clear function, 00000001
+		oprt r29
+		opin0 8 #E pin back to 0
+
+	addi r29, r0, 0 #Reset r29
+	addi r30, r0, 2500
+	lbl WAIT_1.52MS
+		addi r29, r29, 1 #Increment r29
+		cp r29, r30
+		brnl WAIT_1.52MS
+		noop
+		noop
+		noop
+
+	addi r29, r0, 0
+	addi r30, r0, 0
+	
+	jp r28, 0
+	noop
+	noop
+	noop
+#End SR_LCD_STARTUP subroutine
+
+#This subroutine waits for approximately 37 microseconds, for use with the LCD screen
+#Uses registers 26 and 27
+lbl SR_WAIT_37US
+	addi r26, r0, 0 #Reset r26
+	addi r27, r0, 75
+	lbl SR_WAIT_37US_WAIT_START
+		addi r26, r26, 1
+		cp r26, r27
+		brnl SR_WAIT_37US_WAIT_START
+		noop
+		noop
+		noop
+	jp r31, 0
+	noop
+	noop
+	noop
+#End SR_WAIT_37US
+
+#The keyboard handler subroutine, gets scancodes and outputs ASCII codes.
+#Interfaces with the keyboard interface module.
+#Registers used: 26, 29, 30
+#Output placed in 30, 29 erased before and after use.
+lbl SR_KEYBOARD_HANDLE
+	lbl GET_SCAN_CODE
+		ipchk 15 #Check to see if a scan code is ready
+		brnp READY
+		noop
+		noop
+		noop
+		jp GET_SCAN_CODE
+		noop
+		noop
+		noop
+		lbl READY
+               opin0 13 #Make sure the keyboard handler port is selected, "00"
+               opin0 12
+			iprt r30
+			opin1 11 #Toggle acknowledge
+			opin0 11
+
+	#The reason I'm doing branches without noops to buffer them
+	#is that if a branch gets taken, it doesn't matter if another
+	#branch gets put in the works because it has to be false if
+	#the one before it was true.
+	lbl TO_ASCII
+		#These values get checked regardless of shift value
+		cpi r30, 89
+		brne KEY_SHIFT #Right
+		cpi r30, 18
+		brne KEY_SHIFT #Left
+		#Release catch after checking for shifts
+		cpi r29, 1
+		brne RELEASE_CODE
+		noop
+		noop
+		noop
+		cpi r30, 90
+		brne KEY_ENTER
+		cpi r30, 118
+		brne KEY_ESC
+		cpi r30, 102
+		brne KEY_BKSP
+		cpi r30, 116
+		brne KEY_ARROWR
+		cpi r30, 107
+		brne KEY_ARROWL
+		cpi r30, 117
+		brne KEY_ARROWU
+		cpi r30, 114
+		brne KEY_ARROWD
+		cpi r30, 41
+		brne KEY_SPACE
+		cpi r30, 240
+		brne KEY_RELEASE
+		
+		#Check for shifted
+		cpi r26, 1
+		brne SHIFTED
+		noop
+		noop
+		noop
+		
+		#All of these values are for when a shift key isn't pressed
+		lbl UNSHIFTED
+		     #Numbers
+     		cpi r30, 22
+     		brne KEY_1
+     		cpi r30, 30
+     		brne KEY_2
+     		cpi r30, 38
+     		brne KEY_3
+     		cpi r30, 37
+     		brne KEY_4
+     		cpi r30, 46	
+     		brne KEY_5
+     		cpi r30, 54
+     		brne KEY_6
+     		cpi r30, 61
+     		brne KEY_7
+     		cpi r30, 62
+     		brne KEY_8
+     		cpi r30, 70
+     		brne KEY_9
+     		cpi r30, 69
+     		brne KEY_0
+     		#Letters
+     		cpi r30, 28
+     		brne KEY_a
+     		cpi r30, 50
+     		brne KEY_b
+     		cpi r30, 33
+     		brne KEY_c
+     		cpi r30, 35
+     		brne KEY_d
+     		cpi r30, 36
+     		brne KEY_e
+     		cpi r30, 43
+     		brne KEY_f
+     		cpi r30, 52
+     		brne KEY_g
+     		cpi r30, 51
+     		brne KEY_h
+     		cpi r30, 67
+     		brne KEY_i
+     		cpi r30, 59
+     		brne KEY_j
+     		cpi r30, 66
+     		brne KEY_k
+     		cpi r30, 75
+     		brne KEY_l
+     		cpi r30, 58
+     		brne KEY_m
+     		cpi r30, 49
+     		brne KEY_n
+     		cpi r30, 68
+     		brne KEY_o
+     		cpi r30, 77
+     		brne KEY_p
+     		cpi r30, 21
+     		brne KEY_q
+     		cpi r30, 45
+     		brne KEY_r
+     		cpi r30, 27
+     		brne KEY_s
+     		cpi r30, 44
+     		brne KEY_t
+     		cpi r30, 60
+     		brne KEY_u
+     		cpi r30, 42
+     		brne KEY_v
+     		cpi r30, 29
+     		brne KEY_w
+     		cpi r30, 34
+     		brne KEY_x
+     		cpi r30, 53
+     		brne KEY_y
+     		cpi r30, 26
+     		brne KEY_z
+     		#Symbols
+     		cpi r30, 78
+     		brne KEY_-
+     		cpi r30, 85
+     		brne KEY_=
+     		cpi r30, 84
+     		brne KEY_[
+     		cpi r30, 91
+     		brne KEY_]
+     		cpi r30, 93
+     		brne KEY_\
+     		cpi r30, 76
+     		brne KEY_;
+     		cpi r30, 82
+     		brne KEY_'
+     		cpi r30, 65
+     		brne KEY_,
+     		cpi r30, 73
+     		brne KEY_.
+     		cpi r30, 74
+     		brne KEY_/
+     		
+		#All of these codes are for when a shift key is down
+		lbl SHIFTED
+		     #Numbers
+     		cpi r30, 22
+     		brne KEY_!
+     		cpi r30, 30
+     		brne KEY_@
+     		cpi r30, 38
+     		brne KEY_#
+     		cpi r30, 37
+     		brne KEY_$
+     		cpi r30, 46	
+     		brne KEY_%
+     		cpi r30, 54
+     		brne KEY_^
+     		cpi r30, 61
+     		brne KEY_&
+     		cpi r30, 62
+     		brne KEY_*
+     		cpi r30, 70
+     		brne KEY_(
+     		cpi r30, 69
+     		brne KEY_)
+     		#Letters
+     		cpi r30, 28
+     		brne KEY_A
+     		cpi r30, 50
+     		brne KEY_B
+     		cpi r30, 33
+     		brne KEY_C
+     		cpi r30, 35
+     		brne KEY_D
+     		cpi r30, 36
+     		brne KEY_E
+     		cpi r30, 43
+     		brne KEY_F
+     		cpi r30, 52
+     		brne KEY_G
+     		cpi r30, 51
+     		brne KEY_H
+     		cpi r30, 67
+     		brne KEY_I
+     		cpi r30, 59
+     		brne KEY_J
+     		cpi r30, 66
+     		brne KEY_K
+     		cpi r30, 75
+     		brne KEY_L
+     		cpi r30, 58
+     		brne KEY_M
+     		cpi r30, 49
+     		brne KEY_N
+     		cpi r30, 68
+     		brne KEY_O
+     		cpi r30, 77
+     		brne KEY_P
+     		cpi r30, 21
+     		brne KEY_Q
+     		cpi r30, 45
+     		brne KEY_R
+     		cpi r30, 27
+     		brne KEY_S
+     		cpi r30, 44
+     		brne KEY_T
+     		cpi r30, 60
+     		brne KEY_U
+     		cpi r30, 42
+     		brne KEY_V
+     		cpi r30, 29
+     		brne KEY_W
+     		cpi r30, 34
+     		brne KEY_X
+     		cpi r30, 53
+     		brne KEY_Y
+     		cpi r30, 26
+     		brne KEY_Z
+		     #Symbols
+     		cpi r30, 78
+     		brne KEY__
+     		cpi r30, 85
+     		brne KEY_+
+     		cpi r30, 84
+     		brne KEY_{
+     		cpi r30, 91
+     		brne KEY_}
+     		cpi r30, 93
+     		brne KEY_|
+     		cpi r30, 76
+     		brne KEY_:
+     		cpi r30, 82
+     		brne KEY_"
+     		cpi r30, 65
+     		brne KEY_<
+     		cpi r30, 73
+     		brne KEY_>
+     		cpi r30, 74
+     		brne KEY_?
+		     noop
+		     noop
+		     noop
+		
+		jp GET_SCAN_CODE
+		noop
+		noop
+		noop
+
+	lbl KEY_RELEASE #If the release code was sent
+		addi r29, r0, 1
+		jp GET_SCAN_CODE
+		noop
+		noop
+		noop
+
+	lbl RELEASE_CODE #Catching the code after the release code
+		addi r29, r0, 0
+		jp GET_SCAN_CODE
+		noop
+		noop
+		noop
+
+	#All of the labels for setting r30 to the ASCII codes... how inefficient
+	
+	#Other Keys
+	lbl KEY_SHIFT
+	    cpi r29, 1
+	    brne SHIFT_RELEASE
+	    noop
+	    noop
+	    noop
+	    #If shift was pressed, not released
+	    addi r26, r0 1
+	    jp GET_SCAN_CODE
+	    noop
+	    noop
+	    noop
+	    lbl SHIFT_RELEASE
+	        #If shift was released
+	        addi r29, r0, 0 #Reset the release code catch flag
+	        addi r26, r0, 0 #Reset the shift flag
+	        jp GET_SCAN_CODE
+	        noop
+	        noop
+	        noop
+	        
+     lbl KEY_ENTER
+          addi r30, r0, 13
+     	jp r31, 0
+     	noop
+     	noop
+	noop
+     	
+     lbl KEY_ESC
+          addi r30, r0, 27
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+
+     lbl KEY_BKSP
+          addi r30, r0, 8
+     	jp r31, 0
+     	noop
+	noop
+     	noop
+     	
+     lbl KEY_ARROWR
+          addi r30, r0, 17
+     	jp r31, 0
+     	noop
+     	noop
+	noop
+     	
+     lbl KEY_ARROWL
+          addi r30, r0, 18
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+	
+     lbl KEY_ARROWU
+          addi r30, r0, 19
+     	jp r31, 0
+     	noop
+	noop
+     	noop
+     	
+     lbl KEY_ARROWD
+          addi r30, r0, 20
+     	jp r31, 0
+     	noop
+	noop
+     	noop
+     	
+     lbl KEY_SPACE
+     	addi r30, r0, 32
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+ 
+     #ASCII code setting for unshifted values
+     #Numbers
+	lbl KEY_1
+		addi r30, r0, 49
+		jp r31, 0
+		noop
+		noop
+		noop
+
+     lbl KEY_2
+     	addi r30, r0, 50
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+
+     lbl KEY_3
+     	addi r30, r0, 51
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_4
+     	addi r30, r0, 52
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_5
+     	addi r30, r0, 53
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_6
+     	addi r30, r0, 54
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_7
+     	addi r30, r0, 55
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_8
+     	addi r30, r0, 56
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_9
+     	addi r30, r0, 57
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_0
+     	addi r30, r0, 48
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+    	
+    	#Letters
+    	lbl KEY_a
+          addi r30, r0, 97
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_b
+          addi r30, r0, 98
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_c
+    	     addi r30, r0, 99
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_d
+    	     addi r30, r0, 100
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_e
+    	     addi r30, r0, 101
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_f
+    	     addi r30, r0, 102
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_g
+    	     addi r30, r0, 103
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_h
+    	     addi r30, r0, 104
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_i
+    	     addi r30, r0, 105
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_j
+    	     addi r30, r0, 106
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_k
+    	     addi r30, r0, 107
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_l
+    	     addi r30, r0, 108
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_m
+    	     addi r30, r0, 109
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_n
+    	     addi r30, r0, 110
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_o
+    	     addi r30, r0, 111
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_p
+    	     addi r30, r0, 112
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_q
+    	     addi r30, r0, 113
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_r
+    	     addi r30, r0, 114
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_s
+    	     addi r30, r0, 115
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_t
+    	     addi r30, r0, 116
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_u
+    	     addi r30, r0, 117
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_v
+    	     addi r30, r0, 118
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_w
+    	     addi r30, r0, 119
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_x
+    	     addi r30, r0, 120
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_y
+    	     addi r30, r0, 121
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_z
+    	     addi r30, r0, 122
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+    	
+    	#Symbols
+    	lbl KEY_-
+    	     addi r30, r0, 45
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_=
+    	     addi r30, r0, 61
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_[
+    	     addi r30, r0, 91
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_]
+    	     addi r30, r0, 93
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_\
+    	     addi r30, r0, 92
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_;
+    	     addi r30, r0, 59
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_'
+    	     addi r30, r0, 96
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_,
+    	     addi r30, r0, 44
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_.
+    	     addi r30, r0, 46
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	lbl KEY_/
+    	     addi r30, r0, 47
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+     	
+    	#For shifted values
+     #Numbers/symbols
+     lbl KEY_!
+         addi r30, r0, 33
+         jp r31, 0
+         noop
+         noop
+         noop
+         
+     lbl KEY_@
+         addi r30, r0, 64
+         jp r31, 0
+         noop
+         noop
+         noop
+         
+     lbl KEY_#
+         addi r30, r0, 35
+         jp r31, 0
+         noop
+         noop
+         noop
+         
+     lbl KEY_$
+         addi r30, r0, 36
+         jp r31, 0
+         noop
+         noop
+         noop
+         
+     lbl KEY_%
+         addi r30, r0, 37
+         jp r31, 0
+         noop
+         noop
+         noop
+         
+     lbl KEY_^
+         addi r30, r0, 94
+         jp r31, 0
+         noop
+         noop
+         noop
+         
+     lbl KEY_&
+         addi r30, r0, 38
+         jp r31, 0
+         noop
+         noop
+         noop
+         
+     lbl KEY_*
+         addi r30, r0, 42
+         jp r31, 0
+         noop
+         noop
+         noop
+         
+     lbl KEY_(
+         addi r30, r0, 40
+         jp r31, 0
+         noop
+         noop
+         noop
+         
+     lbl KEY_)
+         addi r30, r0, 41
+         jp r31, 0
+         noop
+         noop
+         noop
+         
+     #Letters     
+     lbl KEY_A
+     	addi r30, r0, 65
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_B
+     	addi r30, r0, 66
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_C
+     	addi r30, r0, 67
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_D
+     	addi r30, r0, 68
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_E
+     	addi r30, r0, 69
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_F
+     	addi r30, r0, 70
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_G
+     	addi r30, r0, 71
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_H
+     	addi r30, r0, 72
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_I
+     	addi r30, r0, 73
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_J
+     	addi r30, r0, 74
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_K
+     	addi r30, r0, 75
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_L
+     	addi r30, r0, 76
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_M
+     	addi r30, r0, 77
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_N
+     	addi r30, r0, 78
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_O
+     	addi r30, r0, 79
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_P
+     	addi r30, r0, 80
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_Q
+     	addi r30, r0, 81
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_R
+     	addi r30, r0, 82
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_S
+     	addi r30, r0, 83
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_T
+     	addi r30, r0, 84
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_U
+     	addi r30, r0, 85
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_V
+     	addi r30, r0, 86
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_W
+     	addi r30, r0, 87
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_X
+     	addi r30, r0, 88
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_Y
+     	addi r30, r0, 89
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     
+     lbl KEY_Z
+     	addi r30, r0, 90
+     	jp r31, 0
+     	noop
+     	noop
+     	noop
+     	
+    	#Symbols
+    	lbl KEY__
+    	    addi r30, r0, 95
+    	    jp r31, 0
+    	    noop
+    	    noop
+    	    noop
+    	    
+     lbl KEY_+
+    	    addi r30, r0, 43
+    	    jp r31, 0
+    	    noop
+    	    noop
+    	    noop
+    	    
+     lbl KEY_{
+    	    addi r30, r0, 123
+    	    jp r31, 0
+    	    noop
+    	    noop
+    	    noop
+    	    
+     lbl KEY_}
+    	    addi r30, r0, 125
+    	    jp r31, 0
+    	    noop
+    	    noop
+    	    noop
+    	    
+     lbl KEY_|
+    	    addi r30, r0, 124
+    	    jp r31, 0
+    	    noop
+    	    noop
+    	    noop
+    	    
+     lbl KEY_:
+    	    addi r30, r0, 58
+    	    jp r31, 0
+    	    noop
+    	    noop
+    	    noop
+    	    
+     lbl KEY_"
+    	    addi r30, r0, 34
+    	    jp r31, 0
+    	    noop
+    	    noop
+    	    noop
+    	    
+     lbl KEY_<
+    	    addi r30, r0, 60
+    	    jp r31, 0
+    	    noop
+    	    noop
+    	    noop
+    	    
+     lbl KEY_>
+    	    addi r30, r0, 62
+    	    jp r31, 0
+    	    noop
+    	    noop
+    	    noop
+    	    
+     lbl KEY_?
+    	    addi r30, r0, 63
+    	    jp r31, 0
+    	    noop
+    	    noop
+    	    noop
+    	    
+#End SR_KEYBOARD_HANDLE subroutine
+
+#This subroutine simply writes a line to the LCD display.
+#Parameters: Start address - r30
+#            Line 1 or 2 - r29 (0/1), r29 also used for storing data
+#r28 is an index for the wait loop
+#r27 is an index for the write loop
+lbl SR_LCD_WRITE_LINE
+	opin0 10 #RW to 0 forever
+	addi r27, r0, 0 #Make sure 27 has been reset
+	
+	#Test r29 for first or second line
+	cpi r29, 1
+	brne SR_LCD_WRITE_LINE_2
+	noop
+	noop
+	noop
+
+	#If it's line one, set the cursor to address 0
+	lbl SR_LCD_WRITE_LINE_1
+		opin0 9 #RS to 0
+		opin1 8 #E to 1
+		addi r25, r0, 128 #Send instruction to set cursor to 0, "10000000"
+		oprt r25
+		opin0 8 #E back to 0
+		jp SR_LCD_WRITE_LINE_LOOP
+		noop
+		noop
+		noop
+
+	#If it's line two, set the cursor to address 64
+	lbl SR_LCD_WRITE_LINE_2
+		opin0 9 #RS to 0
+		opin1 8 #E to 1
+		addi r25, r0, 192 #Send instruction to set cursor to 64, "11000000"
+		oprt r25
+		opin0 8 #E back to 0
+
+	#The loop that does the heavy lifting
+	lbl SR_LCD_WRITE_LINE_LOOP
+		ldl r29, r30, 0 #Get the character out of memory
+		noop
+		noop
+		noop
+
+		#Write the character
+		opin1 9
+		opin1 8
+		oprt r29
+		opin0 8
+		opin0 9
+
+		#Wait for at least 37 microseconds
+		addi r28, r0, 0 #Make sure the index is reset
+		lbl SR_LCD_WRITE_LINE_WAIT
+			addi r28, r28, 1
+			cpi r28, 100
+			brnl SR_LCD_WRITE_LINE_WAIT
+			noop
+			noop
+			noop
+
+		#Advance the write loop index
+		addi r27, r27, 1
+		#Check the index, exit loop if 17
+		cpi r27, 17
+		brne SR_LCD_WRITE_LINE_END
+		noop
+		noop
+		noop
+
+		#If the index wasn't 16, advance the address register
+		addi r30, r30, 1
+		
+		#Loop back
+		jp SR_LCD_WRITE_LINE_LOOP
+		noop
+		noop
+		noop
+
+	lbl SR_LCD_WRITE_LINE_END
+		jp r31, 0
+		noop
+		noop
+		noop
+#End SR_LCD_WRITE_LINE subroutine
+%

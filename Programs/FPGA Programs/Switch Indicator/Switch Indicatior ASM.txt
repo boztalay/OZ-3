@@ -1,0 +1,129 @@
+#This program uses the onboard switches as inputs, and 
+#displays which switch is on, according to the highest number switch
+
+#Make sure various registers are reset
+oprt r0
+addi r1, r0, 0
+
+#This is the main program loop
+lbl MAIN_LOOP
+
+#This big chunk of code checks each switch in sequence, highest number to lowest
+#There would usually be three noops after each branch, but for performance, I can
+#afford onlyn using two because it doesn't matter if the ipchk instructions get put
+#in the pipeline before the processor branches.
+
+ipchk 7
+brnp PIN_7
+noop
+noop
+
+ipchk 6
+brnp PIN_6
+noop
+noop
+
+ipchk 5
+brnp PIN_5
+noop
+noop
+
+ipchk 4
+brnp PIN_4
+noop
+noop
+
+ipchk 3
+brnp PIN_3
+noop
+noop
+
+ipchk 2
+brnp PIN_2
+noop
+noop
+
+ipchk 1
+brnp PIN_1
+noop
+noop
+
+ipchk 0
+brnp PIN_0
+noop
+noop
+noop
+
+#If no switches are on, display 0 and jump back
+oprt r0
+jp MAIN_LOOP
+noop
+noop
+noop
+
+#This section covers all of the handlers for each pin
+
+lbl PIN_7
+addi r1, r0, 8
+oprt r1
+jp MAIN_LOOP
+noop
+noop
+noop
+
+lbl PIN_6
+addi r1, r0, 7
+oprt r1
+jp MAIN_LOOP
+noop
+noop
+noop
+
+lbl PIN_5
+addi r1, r0, 6
+oprt r1
+jp MAIN_LOOP
+noop
+noop
+noop
+
+lbl PIN_4
+addi r1, r0, 5
+oprt r1
+jp MAIN_LOOP
+noop
+noop
+noop
+
+lbl PIN_3
+addi r1, r0, 4
+oprt r1
+jp MAIN_LOOP
+noop
+noop
+noop
+
+lbl PIN_2
+addi r1, r0, 3
+oprt r1
+jp MAIN_LOOP
+noop
+noop
+noop
+
+lbl PIN_1
+addi r1, r0, 2
+oprt r1
+jp MAIN_LOOP
+noop
+noop
+noop
+
+lbl PIN_0
+addi r1, r0, 1
+oprt r1
+jp MAIN_LOOP
+noop
+noop
+noop
+%

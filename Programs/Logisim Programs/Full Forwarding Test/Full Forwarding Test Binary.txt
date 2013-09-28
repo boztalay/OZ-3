@@ -1,0 +1,14 @@
+00000000000000000000000000000000 --0: no op start
+00100000001000000000000000000001 --1: addi r1, r0, 1
+00100000010000010000000000000001 --2: addi r2, r1, 1
+00100000011000010000000000000010 --3: addi r3, r1, 2
+00100000100000010000000000000011 --4: addi r4, r1, 3
+00100000101000010000000000000100 --5: addi r5, r1, 4
+00100000110000010000000000000101 --6: addi r6, r1, 5
+%
+
+Full Forwarding Test
+
+This program simply tests the forwarding capabilities
+of all of the stages. Should this work properly, all
+of the registers should have the value of their number.

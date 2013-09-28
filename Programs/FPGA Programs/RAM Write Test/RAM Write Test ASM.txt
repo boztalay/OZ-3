@@ -1,0 +1,25 @@
+addi r2, r0, 55
+lbl START
+	strl r2, r0, 1		
+	noop
+	noop
+	noop
+	noop
+	noop
+	ldl r1, r0, 1
+	noop
+	noop
+	noop
+	noop
+	noop
+	oprt r1
+	noop
+	noop
+	noop
+	opin1 0
+	opin0 0
+jp START
+noop
+noop
+noop
+%

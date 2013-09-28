@@ -1,0 +1,92 @@
+addi r1, r0, 1
+strl r1, r0, 0
+addi r1, r0, 2
+strl r1, r0, 1
+addi r1, r0, 3
+strl r1, r0, 2
+
+
+addi r1, r0, 4
+addi r2, r0, 2
+addi r4, r0, 3 #addr
+
+lbl OUTOUTLOOP
+
+	lbl OUTLOOP
+
+		add r3, r1, r0
+
+		lbl INLOOP
+
+			sub r3, r3, r2
+	
+			brnc INEXIT
+			noop
+			noop
+			noop
+
+			cpi r3, 0
+			brne OUTLOOPEXIT
+			noop
+			noop
+			noop
+
+			jp INLOOP
+			noop
+			noop
+			noop
+		
+		lbl INEXIT
+
+		addi r2, r2, 1
+
+		cp r2, r1
+		brne OUTLOOPEXIT
+		noop
+		noop
+		noop
+
+		cpi r2, 11
+		brne OUTLOOPEXIT
+		noop
+		noop
+		noop
+
+		jp OUTLOOP
+		noop
+		noop
+		noop
+
+	lbl OUTLOOPEXIT
+
+	addi r2, r0, 2
+
+	cpi r3, 0
+	brne NOPRIME
+	noop
+	noop
+	noop
+	
+	strl r1, r4, 0
+	addi r4, r4, 1
+	addi r1, r1, 1
+	jp OUTOUTLOOP
+	noop
+	noop
+	noop
+
+	lbl NOPRIME
+	addi r1, r1, 1
+	jp OUTOUTLOOP
+	noop
+	noop
+	noop
+
+lbl END
+noop
+jp END
+noop
+noop
+noop
+
+%

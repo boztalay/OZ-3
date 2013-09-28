@@ -1,0 +1,134 @@
+#This is a program to control an LCD character display (PMOD_CLP)
+
+#Output Port 7-0: The data bus to the LCD controller
+#Output Pin 8: Controls the E pin of the LCD controller
+#Output Pin 9: Controls the RS pin of the LCD controller
+#Output Pin 10: Controls the R/W pin of the LCD controller
+
+#As a note, the output port is also sent to the 7-segment display decoder
+
+
+#This is the startup sequence for the LCD controller
+
+opin0 10 #Set the R/W pin to 0 forever
+opin1 0 #Run light
+
+lbl SET_FUNCTION
+	opin0 9 #RS pin to 0
+	opin1 8 #E pin to 1
+	addi r1, r0, 56 #Send the set function, 00111000
+	oprt r1
+	opin0 8 #E pin back to 0
+	
+addi r1, r0, 0 #Reset r1, which will be used for counting cycles
+addi r2, r0, 75
+lbl WAIT_37US1
+	addi r1, r1, 1
+	cp r1, r2
+	brnl WAIT_37US1
+	noop
+	noop
+	noop
+
+lbl DISPLAY_SET
+	opin0 9 #RS pin to 0
+	opin1 8 #E pin to 1
+	addi r1, r0, 15 #Send the display set function, 00001111
+	oprt r1
+	opin0 8 #E pin back to 0
+
+addi r1, r0, 0 #Reset r1, which will be used for counting cycles
+addi r2, r0, 75
+lbl WAIT_37US2
+	addi r1, r1, 1
+	cp r1, r2
+	brnl WAIT_37US2
+	noop
+	noop
+	noop
+
+lbl DISPLAY_CLEAR
+	opin0 9 #RS pin to 0
+	opin1 8 #E pin to 1
+	addi r1, r0, 1 #Send the display clear function, 00000001
+	oprt r1
+	opin0 8 #E pin back to 0
+
+addi r1, r0, 0 #Reset r1
+addi r2, r0, 2500
+lbl WAIT_1.52MS
+	addi r1, r1, 1 #Increment r1
+	cp r1, r2
+	brnl WAIT_1.52MS
+	noop
+	noop
+	noop
+	
+#End the startup sequence. Ready to send characters
+
+#Send some characters
+
+opin1 9 #RS to 1
+opin1 8 #E to 1
+addi r1, r0, 84
+oprt r1 #Send T
+opin0 8 #E to 0
+opin0 9 #RS to 0
+
+addi r1, r0, 0 #Reset r1, which will be used for counting cycles
+addi r2, r0, 75
+lbl WAIT_37US3
+	addi r1, r1, 1
+	cp r1, r2
+	brnl WAIT_37US3
+	noop
+	noop
+	noop
+
+opin1 9 #RS to 1
+opin1 8 #E to 1
+addi r1, r0, 69
+oprt r1 #Send E
+opin0 8 #E to 0
+opin0 9 #RS to 0
+
+addi r1, r0, 0 #Reset r1, which will be used for counting cycles
+addi r2, r0, 75
+lbl WAIT_37US4
+	addi r1, r1, 1
+	cp r1, r2
+	brnl WAIT_37US4
+	noop
+	noop
+	noop
+
+opin1 9 #RS to 1
+opin1 8 #E to 1
+addi r1, r0, 83
+oprt r1 #Send S
+opin0 8 #E to 0
+opin0 9 #RS to 0
+
+addi r1, r0, 0 #Reset r1, which will be used for counting cycles
+addi r2, r0, 75
+lbl WAIT_37US5
+	addi r1, r1, 1
+	cp r1, r2
+	brnl WAIT_37US5
+	noop
+	noop
+	noop
+
+opin1 9 #RS to 1
+opin1 8 #E to 1
+addi r1, r0, 84
+oprt r1 #Send T
+opin0 8 #E to 0
+opin0 9 #RS to 0
+
+lbl END
+	jp END
+	noop
+	noop
+	noop
+%

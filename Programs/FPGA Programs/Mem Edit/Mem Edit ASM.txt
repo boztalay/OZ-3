@@ -1,0 +1,229 @@
+#This program is a simple memory editor and viewer
+
+#Regsiter 1: holds the address of the space being read from or
+#	     written to
+#Register 2: holds the data to be written, or the data read
+#Register 3: a temporary data register
+
+#Input Pin 0: Decreases address/data, or chooses read mode
+#Input Pin 1: Increases address/data, or chooses write mode
+#Input Pin 2: Sets address/data, resets program to top
+
+#Output Pin 0: LED indicating to set the address
+#Output Pin 1: LED indicating to choose read or write mode
+#Output Pin 2: LED indicating read mode
+#Output Pin 3: LED indicating write mode
+#Output Pin 4: LED indicating to set first 8 bits of data
+#Output Pin 5: LED indicating to set last 8 bits of data
+#Output Pin 6: LED indicating that write is complete, and to confirm the data
+
+#Input port 7-0: Attached to the switches on the board for setting the data to be
+#		 written
+
+
+lbl RESET
+	#This waits for the set button to return to 0
+	ipchk 2
+	brnp RESET
+	noop
+	noop
+	noop
+
+	addi r1, r0, 0 #Reset address
+	addi r2, r0, 0 #Reset data
+	oprt r0
+	opin0 2
+	opin0 3
+	opin0 6
+
+lbl SET_ADDR
+	opin1 0 #Indicate set address
+	oprt r1
+
+	ipchk 0 #Check decrement button
+	brnp DEC_ADDR
+	noop
+	noop
+	noop
+
+	ipchk 1 #Check increment button
+	brnp INC_ADDR
+	noop
+	noop
+	noop
+
+	ipchk 2 #Check set button
+	brnp CHOOSE
+	noop
+	noop
+	noop
+
+	jp SET_ADDR #Complete the input checking loop
+	noop
+	noop
+	noop
+	
+	lbl DEC_ADDR #This waits for the button to raise again and decrements r1
+		ipchk 0
+		brnp DEC_ADDR
+		noop
+		noop
+		noop
+		subi r1, r1, 1
+		jp SET_ADDR
+		noop
+		noop
+		noop
+	
+	lbl INC_ADDR #This waits for the button to raise again and decrements r1
+		ipchk 1
+		brnp INC_ADDR
+		noop
+		noop
+		noop
+		addi r1, r1, 1
+		jp SET_ADDR
+		noop
+		noop
+		noop
+
+lbl CHOOSE
+	opin0 0 #Indicate choose, shut off set indicator
+	opin1 1 
+
+	ipchk 0 #Check button 0 to choose read mode
+	brnp READ_MODE
+	noop
+	noop
+	noop
+
+	ipchk 1 #Check button 1 to choose write mode
+	brnp WRITE_MODE
+	noop
+	noop
+	noop
+
+	jp CHOOSE #Loop until a choice is made
+	noop
+	noop
+	noop
+
+lbl READ_MODE
+	opin0 1 #Indicate read mode, shut off choose indicator	
+	opin1 2
+	
+	ldl r2, r1, 0 #Get the data at the address stored in r1
+	noop
+	noop
+	noop
+	
+	oprt r2 #Display that data
+
+	lbl READ_MODE_END
+		ipchk 2 #Check for the set button, loop otherwise
+		brnp RESET
+		noop
+		noop
+		noop
+		jp READ_MODE_END
+		noop
+		noop
+		noop
+
+lbl WRITE_MODE
+	opin0 1 #Indicate write mode, shuf off shoose indicator
+	opin1 3
+
+	opin1 4 #Indicate set data 1
+	lbl SET_DATA1
+		ipchk 2 #Check for the set button
+		brnp SET_DATA1_BUT
+		noop
+		noop
+		noop
+		
+		iprt r2 #Take in the data
+		noop
+		noop
+		noop
+		oprt r2 #Display the current data
+		
+		jp SET_DATA1 #End the loop
+		noop
+		noop
+		noop
+		
+		lbl SET_DATA1_BUT
+			ipchk 2 #This checks for the button to be released
+			brnp SET_DATA1_BUT
+			noop
+			noop
+			noop
+
+	opin0 4 #Turn off set data 1 indicator	
+	opin1 5 #Indicate set data 2
+	addi r3, r0, 0 #Reset r3
+	lbl SET_DATA2
+		ipchk 2 #Check for the set button
+		brnp SET_DATA2_BUT
+		noop
+		noop
+		noop
+
+		sub r2, r2, r3
+		
+		iprt r3 #Take in the data
+		noop
+		noop
+		#This next bit of code shifts the data over 8 places and combines it with r2
+		add r3, r3, r3
+		add r3, r3, r3
+		add r3, r3, r3
+		add r3, r3, r3
+		add r3, r3, r3
+		add r3, r3, r3
+		add r3, r3, r3
+		add r3, r3, r3
+		add r2, r3, r2
+		oprt r2 #Display the current data
+		
+		jp SET_DATA2 #End the loop
+		noop
+		noop
+		noop
+		
+		lbl SET_DATA2_BUT
+			ipchk 2 #This checks for the button to be released
+			brnp SET_DATA2_BUT
+			noop
+			noop
+			noop
+
+	opin0 5 #Turn off set data 2 indicator
+	opin1 6 #Indicate write and data confirmation	
+	lbl WRITE_MODE_END
+		#This chunk of code writes the data, reads it back, and waits for confirmation
+		strl r2, r1, 0
+		noop
+		noop
+		noop
+		noop
+		noop
+		ldl r3, r1, 0
+		noop
+		noop
+		noop
+		noop
+		noop
+		oprt r3
+		lbl CONFIRM_LOOP
+			ipchk 2 #check for set button
+			brnp RESET
+			noop
+			noop
+			noop
+			jp CONFIRM_LOOP
+			noop
+			noop
+			noop
+%
