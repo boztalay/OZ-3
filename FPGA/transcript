@@ -1,0 +1,221 @@
+# Reading C:/Modeltech_xe_starter/tcl/vsim/pref.tcl 
+# do {OZ3_System_TB.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity genreg
+# -- Compiling architecture behavioral of genreg
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity regfile
+# -- Compiling architecture behavioral of regfile
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity genregfalling
+# -- Compiling architecture behavioral of genregfalling
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity conditionblock
+# -- Compiling architecture behavioral of conditionblock
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity alu
+# -- Compiling architecture behavioral of alu
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity gen_shift_reg_falling
+# -- Compiling architecture behavioral of gen_shift_reg_falling
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity gen_latch_high
+# -- Compiling architecture behavioral of gen_latch_high
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity wb
+# -- Compiling architecture behavioral of wb
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity output_pin_cntl
+# -- Compiling architecture behavioral of output_pin_cntl
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity memio
+# -- Compiling architecture behavioral of memio
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package vcomponents
+# -- Compiling entity ifetch
+# -- Compiling architecture behavioral of ifetch
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package vcomponents
+# -- Compiling entity id
+# -- Compiling architecture behavioral of id
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity ex
+# -- Compiling architecture behavioral of ex
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity output_port_mux
+# -- Compiling architecture behavioral of output_port_mux
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity mem_ctrl
+# -- Compiling architecture behavioral of mem_ctrl
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity keyboard
+# -- Compiling architecture behavioral of keyboard
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity input_port_mux
+# -- Compiling architecture behavioral of input_port_mux
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity four_dig_7seg
+# -- Compiling architecture behavioral of four_dig_7seg
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity debouncer
+# -- Compiling architecture behavioral of debouncer
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package vcomponents
+# -- Compiling entity clock_mgt
+# -- Compiling architecture behavioral of clock_mgt
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package vcomponents
+# -- Compiling entity oz3
+# -- Compiling architecture behavioral of oz3
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package vcomponents
+# -- Compiling entity oz3_system
+# -- Compiling architecture behavioral of oz3_system
+# Model Technology ModelSim XE III vcom 6.4b Compiler 2008.11 Nov 15 2008
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_std
+# -- Compiling entity oz3_system_tb
+# -- Compiling architecture behavior of oz3_system_tb
+# ** Warning: [4] OZ3_System_TB.vhd(155): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# vsim -lib work -t 1ps OZ3_System_TB 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.oz3_system_tb(behavior)
+# Loading unisim.vcomponents
+# Loading work.oz3_system(behavioral)
+# Loading work.oz3(behavioral)
+# Loading work.ifetch(behavioral)
+# Loading work.genreg(behavioral)
+# Loading work.genregfalling(behavioral)
+# Loading unisim.bufg(bufg_v)
+# Loading work.id(behavioral)
+# Loading work.regfile(behavioral)
+# Loading work.ex(behavioral)
+# Loading work.alu(behavioral)
+# Loading work.conditionblock(behavioral)
+# Loading work.memio(behavioral)
+# Loading work.wb(behavioral)
+# Loading work.output_pin_cntl(behavioral)
+# Loading work.mem_ctrl(behavioral)
+# Loading work.clock_mgt(behavioral)
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading unisim.vpkg(body)
+# Loading unisim.dcm(dcm_v)
+# Loading unisim.dcm_clock_divide_by_2(dcm_clock_divide_by_2_v)
+# Loading unisim.dcm_maximum_period_check(dcm_maximum_period_check_v)
+# Loading unisim.dcm_clock_lost(dcm_clock_lost_v)
+# Loading unisim.buf(buf_v)
+# Loading work.four_dig_7seg(behavioral)
+# Loading work.input_port_mux(behavioral)
+# Loading work.output_port_mux(behavioral)
+# Loading work.gen_latch_high(behavioral)
+# Loading work.debouncer(behavioral)
+# Loading work.keyboard(behavioral)
+# Loading work.gen_shift_reg_falling(behavioral)
+# ** Failure: (vsim-3808) Incompatible modes for port "data_bus".
+#    Time: 0 ps  Iteration: 0  Instance: /oz3_system_tb/uut/mem_ctrl_inst File: Mem_Ctrl.vhd Line: 262
+# Fatal error in Architecture behavioral at OZ3_System.vhd line 386
+#  while elaborating region: /oz3_system_tb/uut
+# Fatal error in Process stim_proc at OZ3_System_TB.vhd line 153
+#  while elaborating region: /oz3_system_tb
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./OZ3_System_TB.fdo PAUSED at line 28

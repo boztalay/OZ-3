@@ -1,0 +1,110 @@
+NET "clock" LOC = "B8";
+NET "reset" LOC = "B18";
+
+NET "key_clock" LOC = "R12";
+NET "key_data" LOC = "P11";
+			 
+NET "dRAM_ce" LOC = "R6";
+NET "dRAM_lb" LOC = "K5";
+NET "dRAM_ub" LOC = "K4";
+NET "dRAM_adv" LOC = "J4";
+NET "dRAM_cre" LOC = "P7";
+NET "dRAM_clk" LOC = "H5";
+
+NET "flash_ce" LOC = "R5";
+NET "flash_rp" LOC = "T5";
+
+NET "mem_oe" LOC = "T2";
+NET "mem_we" LOC = "N7";
+
+NET "decoder_out<6>"  LOC = "L18";
+NET "decoder_out<5>"  LOC = "F18";
+NET "decoder_out<4>"  LOC = "D17";
+NET "decoder_out<3>"  LOC = "D16";
+NET "decoder_out<2>"  LOC = "G14";
+NET "decoder_out<1>"  LOC = "J17";
+NET "decoder_out<0>"  LOC = "H14";
+
+NET "anodes<0>" LOC = "F17";
+NET "anodes<1>" LOC = "H17";
+NET "anodes<2>" LOC = "C18";
+NET "anodes<3>" LOC = "F15";
+
+NET "button_0" LOC = "H13";
+NET "button_1" LOC = "E18";
+NET "button_2" LOC = "D18";
+
+NET "switches<0>" LOC = "G18";
+NET "switches<1>" LOC = "H18";
+NET "switches<2>" LOC = "K18";
+NET "switches<3>" LOC = "K17";
+NET "switches<4>" LOC = "L14";
+NET "switches<5>" LOC = "L13";
+NET "switches<6>" LOC = "N17";
+NET "switches<7>" LOC = "R17";
+
+NET "LEDs<0>" LOC = "J14";
+NET "LEDs<1>" LOC = "J15";
+NET "LEDs<2>" LOC = "K15";
+NET "LEDs<3>" LOC = "K14";
+NET "LEDs<4>" LOC = "E17";
+NET "LEDs<5>" LOC = "P15";
+NET "LEDs<6>" LOC = "F4";
+NET "LEDs<7>" LOC = "R4";
+
+NET "LCD_E" LOC = "T18";
+NET "LCD_RS" LOC = "P17";
+NET "LCD_RW" LOC = "R16";
+
+NET "LCD_data_bus_out<0>" LOC = "L15";
+NET "LCD_data_bus_out<1>" LOC = "K12";
+NET "LCD_data_bus_out<2>" LOC = "L17";
+NET "LCD_data_bus_out<3>" LOC = "M15";
+NET "LCD_data_bus_out<4>" LOC = "K13";
+NET "LCD_data_bus_out<5>" LOC = "L16";
+NET "LCD_data_bus_out<6>" LOC = "M14";
+NET "LCD_data_bus_out<7>" LOC = "M16";
+
+NET "memory_address_bus<0>" LOC = "J1";
+NET "memory_address_bus<1>" LOC = "J2";
+NET "memory_address_bus<2>" LOC = "H4";
+NET "memory_address_bus<3>" LOC = "H1";
+NET "memory_address_bus<4>" LOC = "H2";
+NET "memory_address_bus<5>" LOC = "J5";
+NET "memory_address_bus<6>" LOC = "H3";
+NET "memory_address_bus<7>" LOC = "H6";
+NET "memory_address_bus<8>" LOC = "F1";
+NET "memory_address_bus<9>" LOC = "G3";
+NET "memory_address_bus<10>" LOC = "G6";
+NET "memory_address_bus<11>" LOC = "G5";
+NET "memory_address_bus<12>" LOC = "G4";
+NET "memory_address_bus<13>" LOC = "F2";
+NET "memory_address_bus<14>" LOC = "E1";
+NET "memory_address_bus<15>" LOC = "M5";
+NET "memory_address_bus<16>" LOC = "E2";
+NET "memory_address_bus<17>" LOC = "C2";
+NET "memory_address_bus<18>" LOC = "C1";
+NET "memory_address_bus<19>" LOC = "D2";
+NET "memory_address_bus<20>" LOC = "K3";
+NET "memory_address_bus<21>" LOC = "D1";
+NET "memory_address_bus<22>" LOC = "K6";
+
+NET "memory_data_bus<0>" LOC = "L1";
+NET "memory_data_bus<1>" LOC = "L4";
+NET "memory_data_bus<2>" LOC = "L6";
+NET "memory_data_bus<3>" LOC = "M4";
+NET "memory_data_bus<4>" LOC = "N5";
+NET "memory_data_bus<5>" LOC = "P1";
+NET "memory_data_bus<6>" LOC = "P2";
+NET "memory_data_bus<7>" LOC = "R2";
+NET "memory_data_bus<8>" LOC = "L3";
+NET "memory_data_bus<9>" LOC = "L5";
+NET "memory_data_bus<10>" LOC = "M3";
+NET "memory_data_bus<11>" LOC = "M6";
+NET "memory_data_bus<12>" LOC = "L2";
+NET "memory_data_bus<13>" LOC = "N4";
+NET "memory_data_bus<14>" LOC = "R3";
+NET "memory_data_bus<15>" LOC = "T1";
+
+NET "clock" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "key_clock" CLOCK_DEDICATED_ROUTE = FALSE;

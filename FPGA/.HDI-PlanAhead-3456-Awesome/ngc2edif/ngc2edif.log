@@ -1,0 +1,16 @@
+Release 11.3 - ngc2edif L.57 (nt64)
+Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.
+Reading design OZ3_System.ngc ...
+WARNING:NetListWriters:298 - No output is written to OZ3_System.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus OZ3_inst/IF_stage/AltAddrReg/data_reg<32
+   : 0> on block OZ3_System is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus OZ3_inst/MEMIO_control<20 : 0> on block
+   OZ3_System is not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file OZ3_System.edif ...
+ngc2edif: Total memory usage is 90192 kilobytes
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="MapLib" num="562" delta="unknown" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="LIT" num="244" delta="unknown" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+</msg>
+
+<msg type="warning" file="LIT" num="177" delta="unknown" >Clock buffer <arg fmt="%s" index="1">BUFGMUX symbol &quot;physical_group_OZ3_inst/IF_stage/alt_addr_reg_r_buf/OZ3_inst/IF_stage/alt_addr_reg_r_buff&quot; (output signal=OZ3_inst/IF_stage/alt_addr_reg_r_buf)</arg> does not drive clock loads. Driving only non-clock loads with a clock buffer will cause ALL of the dedicated clock routing resources for this buffer to be wasted. Some of the non-clock loads are (maximum of 5 listed): 
+<arg fmt="%s" index="2">Pin CLR of OZ3_inst/IF_stage/AltAddrReg/data_reg_32
+Pin CLR of OZ3_inst/IF_stage/AltAddrReg/data_reg_22
+Pin CLR of OZ3_inst/IF_stage/AltAddrReg/data_reg_21
+Pin CLR of OZ3_inst/IF_stage/AltAddrReg/data_reg_20
+Pin CLR of OZ3_inst/IF_stage/AltAddrReg/data_reg_19</arg>
+</msg>
+
+<msg type="warning" file="LIT" num="175" delta="unknown" >Clock buffer is designated to drive clock loads. <arg fmt="%s" index="1">BUFGMUX symbol &quot;physical_group_clock_1/clk_mgt/clock1_out_buf&quot; (output signal=clock_1)</arg> has a mix of clock and non-clock loads. Some of the non-clock loads are (maximum of 5 listed):
+<arg fmt="%s" index="2">Pin CE of OZ3_inst/IF_stage/Inst_reg_2/data_reg_15
+Pin CE of OZ3_inst/IF_stage/Inst_reg_2/data_reg_14
+Pin CE of OZ3_inst/IF_stage/Inst_reg_2/data_reg_13
+Pin CE of OZ3_inst/IF_stage/Inst_reg_2/data_reg_12
+Pin CE of OZ3_inst/IF_stage/Inst_reg_2/data_reg_11</arg>
+</msg>
+
+<msg type="warning" file="LIT" num="177" delta="unknown" >Clock buffer <arg fmt="%s" index="1">BUFGMUX symbol &quot;physical_group_clock_3/clk_mgt/clock3_out_buf&quot; (output signal=clock_3)</arg> does not drive clock loads. Driving only non-clock loads with a clock buffer will cause ALL of the dedicated clock routing resources for this buffer to be wasted. Some of the non-clock loads are (maximum of 5 listed): 
+<arg fmt="%s" index="2">Pin CE of OZ3_inst/IF_stage/AltAddrReg/data_reg_32
+Pin CE of OZ3_inst/IF_stage/AltAddrReg/data_reg_22
+Pin CE of OZ3_inst/IF_stage/AltAddrReg/data_reg_21
+Pin CE of OZ3_inst/IF_stage/AltAddrReg/data_reg_20
+Pin CE of OZ3_inst/IF_stage/AltAddrReg/data_reg_19</arg>
+</msg>
+
+<msg type="warning" file="LIT" num="175" delta="unknown" >Clock buffer is designated to drive clock loads. <arg fmt="%s" index="1">BUFGMUX symbol &quot;physical_group_dRAM_ce_OBUF/clk_mgt/clock4_out_buf&quot; (output signal=dRAM_ce_OBUF)</arg> has a mix of clock and non-clock loads. Some of the non-clock loads are (maximum of 5 listed):
+<arg fmt="%s" index="2">Pin I0 of mem_ctrl_inst/address_bus&lt;9&gt;1
+Pin I0 of mem_ctrl_inst/address_bus&lt;8&gt;1
+Pin I0 of mem_ctrl_inst/address_bus&lt;7&gt;1
+Pin I0 of mem_ctrl_inst/address_bus&lt;6&gt;1
+Pin I0 of mem_ctrl_inst/address_bus&lt;5&gt;1</arg>
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="unknown" >Gated clock. Clock net <arg fmt="%s" index="1">Decoder/to_decoder_cmp_eq0000</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="info" file="PhysDesignRules" num="772" delta="unknown" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">clk_mgt/DCM_1</arg>, consult the device Interactive Data Sheet.
+</msg>
+
+<msg type="info" file="PhysDesignRules" num="772" delta="unknown" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">clk_mgt/DCM_3</arg>, consult the device Interactive Data Sheet.
+</msg>
+
+</messages>
+

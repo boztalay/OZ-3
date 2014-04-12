@@ -1,0 +1,139 @@
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+xst -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -ifn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.xst" -ofn "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.syr" 
+ngdbuild -ise "OZ-3_System.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 OZ3_System.ngc OZ3_System.ngd  
+map -ise "OZ-3_System.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o OZ3_System_map.ncd OZ3_System.ngd OZ3_System.pcf 
+par -ise "OZ-3_System.ise" -w -intstyle ise -ol high -t 1 OZ3_System_map.ncd OZ3_System.ncd OZ3_System.pcf 
+trce -ise "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise" -intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf 
+bitgen -ise "OZ-3_System.ise" -intstyle ise -f OZ3_System.ut OZ3_System.ncd 

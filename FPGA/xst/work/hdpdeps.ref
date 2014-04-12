@@ -1,0 +1,179 @@
+V3 90
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/ALU.vhd" 2010/05/17.19:23:53 L.33
+EN work/ALU 1276499939 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/ALU.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449
+AR work/ALU/Behavioral 1276499940 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/ALU.vhd" \
+      EN work/ALU 1276499939
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/ConditionBlock.vhd" 2010/05/17.19:53:25 L.33
+EN work/ConditionBlock 1276499941 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/ConditionBlock.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449
+AR work/ConditionBlock/Behavioral 1276499942 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/ConditionBlock.vhd" \
+      EN work/ConditionBlock 1276499941 CP GenReg
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/EX.vhd" 2010/05/17.15:12:13 L.33
+EN work/EX 1276499951 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/EX.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449
+AR work/EX/Behavioral 1276499952 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/EX.vhd" \
+      EN work/EX 1276499951 CP ALU CP ConditionBlock CP GenReg
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenReg.vhd" 2010/05/16.01:26:00 L.33
+EN work/GenReg 1276499935 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenReg.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449
+AR work/GenReg/Behavioral 1276499936 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenReg.vhd" \
+      EN work/GenReg 1276499935
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenRegFalling.vhd" 2010/05/16.01:25:57 L.33
+EN work/GenRegFalling 1276499937 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenRegFalling.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449
+AR work/GenRegFalling/Behavioral 1276499938 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenRegFalling.vhd" \
+      EN work/GenRegFalling 1276499937
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/ID.vhd" 2010/05/24.10:18:31 L.33
+EN work/ID 1276499949 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/ID.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449 LB UNISIM PH unisim/VCOMPONENTS 1236108447
+AR work/ID/Behavioral 1276499950 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/ID.vhd" \
+      EN work/ID 1276499949 CP RegFile CP GenReg
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/IF.vhd" 2010/05/24.10:11:33 L.33
+EN work/IFetch 1276499947 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/IF.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449 LB UNISIM PH unisim/VCOMPONENTS 1236108447
+AR work/IFetch/Behavioral 1276499948 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/IF.vhd" \
+      EN work/IFetch 1276499947 CP GenReg CP GenRegFalling CP BUFG
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/MEMIO.vhd" 2010/05/24.10:25:21 L.33
+EN work/MEMIO 1276499953 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/MEMIO.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449
+AR work/MEMIO/Behavioral 1276499954 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/MEMIO.vhd" \
+      EN work/MEMIO 1276499953 CP GenReg CP GenRegFalling
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/output_pin_cntl.vhd" 2010/05/17.21:26:54 L.33
+EN work/output_pin_cntl 1276499957 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/output_pin_cntl.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449
+AR work/output_pin_cntl/Behavioral 1276499958 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/output_pin_cntl.vhd" \
+      EN work/output_pin_cntl 1276499957
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/OZ3.vhd" 2010/06/14.01:09:13 L.33
+EN work/OZ3 1276499959 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/OZ3.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449 LB UNISIM PH unisim/VCOMPONENTS 1236108447
+AR work/OZ3/Behavioral 1276499960 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/OZ3.vhd" \
+      EN work/OZ3 1276499959 CP IFetch CP ID CP EX CP MEMIO CP WB CP output_pin_cntl \
+      CP GenReg
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/RegFile.vhd" 2010/05/17.14:46:52 L.33
+EN work/RegFile 1276499943 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/RegFile.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449
+AR work/RegFile/Behavioral 1276499944 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/RegFile.vhd" \
+      EN work/RegFile 1276499943
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/WB.vhd" 2010/05/17.21:24:47 L.33
+EN work/WB 1276499955 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/WB.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449
+AR work/WB/Behavioral 1276499956 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/WB.vhd" \
+      EN work/WB 1276499955 CP GenReg
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Clock_Mgt.vhd" 2010/05/17.21:54:40 L.33
+EN work/Clock_Mgt 1276499963 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Clock_Mgt.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449 LB UNISIM PH unisim/VCOMPONENTS 1236108447
+AR work/Clock_Mgt/Behavioral 1276499964 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Clock_Mgt.vhd" \
+      EN work/Clock_Mgt 1276499963 CP BUFG CP DCM CP BUF
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Debouncer.vhd" 2010/06/03.22:12:39 L.33
+EN work/Debouncer 1276499971 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Debouncer.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449
+AR work/Debouncer/Behavioral 1276499972 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Debouncer.vhd" \
+      EN work/Debouncer 1276499971
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/four_dig_7seg.vhd" 2010/05/16.17:43:09 L.33
+EN work/four_dig_7seg 1276499965 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/four_dig_7seg.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449
+AR work/four_dig_7seg/Behavioral 1276499966 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/four_dig_7seg.vhd" \
+      EN work/four_dig_7seg 1276499965
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Gen_Latch_High.vhd" 2010/06/11.03:00:13 L.33
+EN work/Gen_Latch_High 1276239885 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Gen_Latch_High.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449
+AR work/Gen_Latch_High/Behavioral 1276239886 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Gen_Latch_High.vhd" \
+      EN work/Gen_Latch_High 1276239885
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Gen_Shift_Reg_Falling.vhd" 2010/06/03.23:50:29 L.33
+EN work/Gen_Shift_Reg_Falling 1276499945 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Gen_Shift_Reg_Falling.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449
+AR work/Gen_Shift_Reg_Falling/Behavioral 1276499946 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Gen_Shift_Reg_Falling.vhd" \
+      EN work/Gen_Shift_Reg_Falling 1276499945
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Input_Port_MUX.vhd" 2010/06/09.20:16:01 L.33
+EN work/Input_Port_MUX 1276499967 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Input_Port_MUX.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449
+AR work/Input_Port_MUX/Behavioral 1276499968 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Input_Port_MUX.vhd" \
+      EN work/Input_Port_MUX 1276499967
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Keyboard.vhd" 2010/06/03.23:52:22 L.33
+EN work/Keyboard 1276499973 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Keyboard.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449
+AR work/Keyboard/Behavioral 1276499974 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Keyboard.vhd" \
+      EN work/Keyboard 1276499973 CP Gen_Shift_Reg_Falling
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Mem_Ctrl.vhd" 2010/05/17.22:22:05 L.33
+EN work/Mem_Ctrl 1276499961 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Mem_Ctrl.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449
+AR work/Mem_Ctrl/Behavioral 1276499962 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Mem_Ctrl.vhd" \
+      EN work/Mem_Ctrl 1276499961
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Output_Port_MUX.vhd" 2010/06/14.03:18:51 L.33
+EN work/Output_Port_MUX 1276499969 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Output_Port_MUX.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449
+AR work/Output_Port_MUX/Behavioral 1276499970 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Output_Port_MUX.vhd" \
+      EN work/Output_Port_MUX 1276499969 CP GenRegFalling
+FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.vhd" 2010/06/14.02:10:19 L.33
+EN work/OZ3_System 1276499975 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.vhd" \
+      PB ieee/std_logic_1164 1236108447 PB ieee/std_logic_arith 1236108448 \
+      PB ieee/STD_LOGIC_UNSIGNED 1236108449 LB UNISIM PH unisim/VCOMPONENTS 1236108447
+AR work/OZ3_System/Behavioral 1276499976 \
+      FL "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.vhd" \
+      EN work/OZ3_System 1276499975 CP OZ3 CP Mem_Ctrl CP Clock_Mgt CP four_dig_7seg \
+      CP Input_Port_MUX CP Output_Port_MUX CP Debouncer CP Keyboard

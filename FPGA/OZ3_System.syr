@@ -1,0 +1,1587 @@
+Release 11.1 - xst L.33 (nt)
+Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: OZ3_System.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "OZ3_System.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "OZ3_System"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : OZ3_System
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 2
+Library Search Order               : OZ3_System.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenReg.vhd" in Library work.
+Architecture behavioral of Entity genreg is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenRegFalling.vhd" in Library work.
+Architecture behavioral of Entity genregfalling is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/ALU.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/ConditionBlock.vhd" in Library work.
+Architecture behavioral of Entity conditionblock is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/RegFile.vhd" in Library work.
+Architecture behavioral of Entity regfile is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Gen_Shift_Reg_Falling.vhd" in Library work.
+Architecture behavioral of Entity gen_shift_reg_falling is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/IF.vhd" in Library work.
+Architecture behavioral of Entity ifetch is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/ID.vhd" in Library work.
+Architecture behavioral of Entity id is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/EX.vhd" in Library work.
+Architecture behavioral of Entity ex is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/MEMIO.vhd" in Library work.
+Architecture behavioral of Entity memio is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/WB.vhd" in Library work.
+Architecture behavioral of Entity wb is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/output_pin_cntl.vhd" in Library work.
+Architecture behavioral of Entity output_pin_cntl is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/OZ3.vhd" in Library work.
+Architecture behavioral of Entity oz3 is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Mem_Ctrl.vhd" in Library work.
+Architecture behavioral of Entity mem_ctrl is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Clock_Mgt.vhd" in Library work.
+Architecture behavioral of Entity clock_mgt is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/four_dig_7seg.vhd" in Library work.
+Architecture behavioral of Entity four_dig_7seg is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Input_Port_MUX.vhd" in Library work.
+Architecture behavioral of Entity input_port_mux is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Output_Port_MUX.vhd" in Library work.
+Entity <output_port_mux> compiled.
+Entity <output_port_mux> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Debouncer.vhd" in Library work.
+Architecture behavioral of Entity debouncer is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Keyboard.vhd" in Library work.
+Architecture behavioral of Entity keyboard is up to date.
+Compiling vhdl file "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.vhd" in Library work.
+Architecture behavioral of Entity oz3_system is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <OZ3_System> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <OZ3> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Mem_Ctrl> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Clock_Mgt> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <four_dig_7seg> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Input_Port_MUX> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Output_Port_MUX> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Debouncer> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Keyboard> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <IFetch> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ID> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <EX> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <MEMIO> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <WB> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <output_pin_cntl> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <GenReg> in library <work> (architecture <behavioral>) with generics.
+	size = 16
+
+Analyzing hierarchy for entity <GenReg> in library <work> (architecture <behavioral>) with generics.
+	size = 32
+
+Analyzing hierarchy for entity <GenRegFalling> in library <work> (architecture <behavioral>) with generics.
+	size = 32
+
+Analyzing hierarchy for entity <Gen_Shift_Reg_Falling> in library <work> (architecture <behavioral>) with generics.
+	size = 11
+
+Analyzing hierarchy for entity <GenReg> in library <work> (architecture <behavioral>) with generics.
+	size = 23
+
+Analyzing hierarchy for entity <GenRegFalling> in library <work> (architecture <behavioral>) with generics.
+	size = 33
+
+Analyzing hierarchy for entity <GenRegFalling> in library <work> (architecture <behavioral>) with generics.
+	size = 16
+
+Analyzing hierarchy for entity <RegFile> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <GenReg> in library <work> (architecture <behavioral>) with generics.
+	size = 32
+
+Analyzing hierarchy for entity <ALU> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ConditionBlock> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <GenReg> in library <work> (architecture <behavioral>) with generics.
+	size = 12
+
+Analyzing hierarchy for entity <GenReg> in library <work> (architecture <behavioral>) with generics.
+	size = 21
+
+Analyzing hierarchy for entity <GenReg> in library <work> (architecture <behavioral>) with generics.
+	size = 6
+
+Analyzing hierarchy for entity <GenReg> in library <work> (architecture <behavioral>) with generics.
+	size = 4
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <OZ3_System> in library <work> (Architecture <behavioral>).
+WARNING:Xst:1541 - "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.vhd" line 331: Different binding for component: <Keyboard>. Port <scan_code> does not match.
+Entity <OZ3_System> analyzed. Unit <OZ3_System> generated.
+
+Analyzing Entity <OZ3> in library <work> (Architecture <behavioral>).
+Entity <OZ3> analyzed. Unit <OZ3> generated.
+
+Analyzing Entity <IFetch> in library <work> (Architecture <behavioral>).
+Entity <IFetch> analyzed. Unit <IFetch> generated.
+
+Analyzing generic Entity <GenReg.3> in library <work> (Architecture <behavioral>).
+	size = 23
+Entity <GenReg.3> analyzed. Unit <GenReg.3> generated.
+
+Analyzing generic Entity <GenRegFalling.2> in library <work> (Architecture <behavioral>).
+	size = 33
+Entity <GenRegFalling.2> analyzed. Unit <GenRegFalling.2> generated.
+
+Analyzing generic Entity <GenRegFalling.3> in library <work> (Architecture <behavioral>).
+	size = 16
+Entity <GenRegFalling.3> analyzed. Unit <GenRegFalling.3> generated.
+
+Analyzing Entity <ID> in library <work> (Architecture <behavioral>).
+Entity <ID> analyzed. Unit <ID> generated.
+
+Analyzing Entity <RegFile> in library <work> (Architecture <behavioral>).
+Entity <RegFile> analyzed. Unit <RegFile> generated.
+
+Analyzing generic Entity <GenReg.4> in library <work> (Architecture <behavioral>).
+	size = 32
+Entity <GenReg.4> analyzed. Unit <GenReg.4> generated.
+
+Analyzing Entity <EX> in library <work> (Architecture <behavioral>).
+Entity <EX> analyzed. Unit <EX> generated.
+
+Analyzing Entity <ALU> in library <work> (Architecture <behavioral>).
+Entity <ALU> analyzed. Unit <ALU> generated.
+
+Analyzing Entity <ConditionBlock> in library <work> (Architecture <behavioral>).
+Entity <ConditionBlock> analyzed. Unit <ConditionBlock> generated.
+
+Analyzing generic Entity <GenReg.8> in library <work> (Architecture <behavioral>).
+	size = 4
+Entity <GenReg.8> analyzed. Unit <GenReg.8> generated.
+
+Analyzing generic Entity <GenReg.5> in library <work> (Architecture <behavioral>).
+	size = 12
+Entity <GenReg.5> analyzed. Unit <GenReg.5> generated.
+
+Analyzing Entity <MEMIO> in library <work> (Architecture <behavioral>).
+Entity <MEMIO> analyzed. Unit <MEMIO> generated.
+
+Analyzing generic Entity <GenReg.6> in library <work> (Architecture <behavioral>).
+	size = 21
+Entity <GenReg.6> analyzed. Unit <GenReg.6> generated.
+
+Analyzing Entity <WB> in library <work> (Architecture <behavioral>).
+Entity <WB> analyzed. Unit <WB> generated.
+
+Analyzing generic Entity <GenReg.7> in library <work> (Architecture <behavioral>).
+	size = 6
+Entity <GenReg.7> analyzed. Unit <GenReg.7> generated.
+
+Analyzing Entity <output_pin_cntl> in library <work> (Architecture <behavioral>).
+Entity <output_pin_cntl> analyzed. Unit <output_pin_cntl> generated.
+
+Analyzing generic Entity <GenReg.1> in library <work> (Architecture <behavioral>).
+	size = 16
+Entity <GenReg.1> analyzed. Unit <GenReg.1> generated.
+
+Analyzing generic Entity <GenReg.2> in library <work> (Architecture <behavioral>).
+	size = 32
+Entity <GenReg.2> analyzed. Unit <GenReg.2> generated.
+
+Analyzing Entity <Mem_Ctrl> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Mem_Ctrl.vhd" line 61: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <data_bus_in>, <dRAM_WR_from_OZ3>
+WARNING:Xst:819 - "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Mem_Ctrl.vhd" line 110: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <flash_address_from_OZ3>, <dRAM_address_from_OZ3>
+Entity <Mem_Ctrl> analyzed. Unit <Mem_Ctrl> generated.
+
+Analyzing Entity <Clock_Mgt> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_1> in unit <Clock_Mgt>.
+    Set user-defined property "CLKFX_DIVIDE =  32" for instance <DCM_1> in unit <Clock_Mgt>.
+    Set user-defined property "CLKFX_MULTIPLY =  2" for instance <DCM_1> in unit <Clock_Mgt>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  TRUE" for instance <DCM_1> in unit <Clock_Mgt>.
+    Set user-defined property "CLKIN_PERIOD =  40.0000000000000000" for instance <DCM_1> in unit <Clock_Mgt>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_1> in unit <Clock_Mgt>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_1> in unit <Clock_Mgt>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_1> in unit <Clock_Mgt>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_1> in unit <Clock_Mgt>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_1> in unit <Clock_Mgt>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_1> in unit <Clock_Mgt>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_1> in unit <Clock_Mgt>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_1> in unit <Clock_Mgt>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_1> in unit <Clock_Mgt>.
+    Set user-defined property "SIM_MODE =  SAFE" for instance <DCM_1> in unit <Clock_Mgt>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_1> in unit <Clock_Mgt>.
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_2> in unit <Clock_Mgt>.
+    Set user-defined property "CLKFX_DIVIDE =  2" for instance <DCM_2> in unit <Clock_Mgt>.
+    Set user-defined property "CLKFX_MULTIPLY =  2" for instance <DCM_2> in unit <Clock_Mgt>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_2> in unit <Clock_Mgt>.
+    Set user-defined property "CLKIN_PERIOD =  640.0000000000000000" for instance <DCM_2> in unit <Clock_Mgt>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_2> in unit <Clock_Mgt>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_2> in unit <Clock_Mgt>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_2> in unit <Clock_Mgt>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_2> in unit <Clock_Mgt>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_2> in unit <Clock_Mgt>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_2> in unit <Clock_Mgt>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_2> in unit <Clock_Mgt>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_2> in unit <Clock_Mgt>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_2> in unit <Clock_Mgt>.
+    Set user-defined property "SIM_MODE =  SAFE" for instance <DCM_2> in unit <Clock_Mgt>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_2> in unit <Clock_Mgt>.
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_3> in unit <Clock_Mgt>.
+    Set user-defined property "CLKFX_DIVIDE =  16" for instance <DCM_3> in unit <Clock_Mgt>.
+    Set user-defined property "CLKFX_MULTIPLY =  2" for instance <DCM_3> in unit <Clock_Mgt>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_3> in unit <Clock_Mgt>.
+    Set user-defined property "CLKIN_PERIOD =  40.0000000000000000" for instance <DCM_3> in unit <Clock_Mgt>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_3> in unit <Clock_Mgt>.
+    Set user-defined property "CLK_FEEDBACK =  NONE" for instance <DCM_3> in unit <Clock_Mgt>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_3> in unit <Clock_Mgt>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_3> in unit <Clock_Mgt>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_3> in unit <Clock_Mgt>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_3> in unit <Clock_Mgt>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_3> in unit <Clock_Mgt>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_3> in unit <Clock_Mgt>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_3> in unit <Clock_Mgt>.
+    Set user-defined property "SIM_MODE =  SAFE" for instance <DCM_3> in unit <Clock_Mgt>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_3> in unit <Clock_Mgt>.
+Entity <Clock_Mgt> analyzed. Unit <Clock_Mgt> generated.
+
+Analyzing Entity <four_dig_7seg> in library <work> (Architecture <behavioral>).
+Entity <four_dig_7seg> analyzed. Unit <four_dig_7seg> generated.
+
+Analyzing Entity <Input_Port_MUX> in library <work> (Architecture <behavioral>).
+Entity <Input_Port_MUX> analyzed. Unit <Input_Port_MUX> generated.
+
+Analyzing Entity <Output_Port_MUX> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Output_Port_MUX.vhd" line 78: Mux is complete : default of case is discarded
+Entity <Output_Port_MUX> analyzed. Unit <Output_Port_MUX> generated.
+
+Analyzing generic Entity <GenRegFalling.1> in library <work> (Architecture <behavioral>).
+	size = 32
+Entity <GenRegFalling.1> analyzed. Unit <GenRegFalling.1> generated.
+
+Analyzing Entity <Debouncer> in library <work> (Architecture <behavioral>).
+Entity <Debouncer> analyzed. Unit <Debouncer> generated.
+
+Analyzing Entity <Keyboard> in library <work> (Architecture <behavioral>).
+Entity <Keyboard> analyzed. Unit <Keyboard> generated.
+
+Analyzing generic Entity <Gen_Shift_Reg_Falling> in library <work> (Architecture <behavioral>).
+	size = 11
+Entity <Gen_Shift_Reg_Falling> analyzed. Unit <Gen_Shift_Reg_Falling> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Mem_Ctrl>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Mem_Ctrl.vhd".
+WARNING:Xst:737 - Found 16-bit latch for signal <data_bus_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 16-bit tristate buffer for signal <data_bus>.
+    Summary:
+	inferred  16 Tristate(s).
+Unit <Mem_Ctrl> synthesized.
+
+
+Synthesizing Unit <four_dig_7seg>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/four_dig_7seg.vhd".
+WARNING:Xst:737 - Found 4-bit latch for signal <to_decoder>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 4-bit latch for signal <anodes>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 16x7-bit ROM for signal <to_display>.
+    Found 32-bit up counter for signal <clk_count>.
+    Found 32-bit up counter for signal <disp_count>.
+    Found 32-bit adder for signal <disp_count$add0000> created at line 49.
+    Found 32-bit adder for signal <disp_count$addsub0000> created at line 51.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <four_dig_7seg> synthesized.
+
+
+Synthesizing Unit <Input_Port_MUX>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Input_Port_MUX.vhd".
+    Found 32-bit 4-to-1 multiplexer for signal <output>.
+    Summary:
+	inferred  32 Multiplexer(s).
+Unit <Input_Port_MUX> synthesized.
+
+
+Synthesizing Unit <Debouncer>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Debouncer.vhd".
+    Register <delay2> equivalent to <delay1> has been removed
+    Register <delay3> equivalent to <delay1> has been removed
+    Found 1-bit register for signal <clk_190Hz>.
+    Found 32-bit up counter for signal <count>.
+    Found 32-bit adder for signal <count$add0000> created at line 39.
+    Found 1-bit register for signal <delay1>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <Debouncer> synthesized.
+
+
+Synthesizing Unit <output_pin_cntl>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/output_pin_cntl.vhd".
+    Found 16-bit register for signal <opin_reg>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <output_pin_cntl> synthesized.
+
+
+Synthesizing Unit <GenReg_1>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenReg.vhd".
+    Found 16-bit register for signal <data_reg>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <GenReg_1> synthesized.
+
+
+Synthesizing Unit <GenReg_2>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenReg.vhd".
+    Found 32-bit register for signal <data_reg>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <GenReg_2> synthesized.
+
+
+Synthesizing Unit <GenReg_3>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenReg.vhd".
+    Found 23-bit register for signal <data_reg>.
+    Summary:
+	inferred  23 D-type flip-flop(s).
+Unit <GenReg_3> synthesized.
+
+
+Synthesizing Unit <GenRegFalling_2>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenRegFalling.vhd".
+    Found 33-bit register for signal <data_reg>.
+    Summary:
+	inferred  33 D-type flip-flop(s).
+Unit <GenRegFalling_2> synthesized.
+
+
+Synthesizing Unit <GenRegFalling_3>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenRegFalling.vhd".
+    Found 16-bit register for signal <data_reg>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <GenRegFalling_3> synthesized.
+
+
+Synthesizing Unit <RegFile>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/RegFile.vhd".
+    Found 32-bit 32-to-1 multiplexer for signal <data_out_1>.
+    Found 32-bit 32-to-1 multiplexer for signal <data_out_2>.
+    Found 32-bit 32-to-1 multiplexer for signal <data_out_3>.
+    Found 1024-bit register for signal <reg_file>.
+INFO:Xst:738 - HDL ADVISOR - 1024 flip-flops were inferred for signal <reg_file>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred 1024 D-type flip-flop(s).
+	inferred  96 Multiplexer(s).
+Unit <RegFile> synthesized.
+
+
+Synthesizing Unit <GenReg_4>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenReg.vhd".
+    Found 32-bit register for signal <data_reg>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <GenReg_4> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/ALU.vhd".
+    Found 32-bit comparator equal for signal <flags$cmp_eq0000> created at line 72.
+    Found 32-bit comparator less for signal <flags$cmp_lt0000> created at line 74.
+    Found 32-bit comparator greater for signal <flags_1$cmp_gt0000> created at line 71.
+    Found 33-bit addsub for signal <output$addsub0000>.
+    Found 32-bit xor2 for signal <output$xor0000> created at line 55.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <GenReg_5>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenReg.vhd".
+    Found 12-bit register for signal <data_reg>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+Unit <GenReg_5> synthesized.
+
+
+Synthesizing Unit <GenReg_8>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenReg.vhd".
+    Found 4-bit register for signal <data_reg>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <GenReg_8> synthesized.
+
+
+Synthesizing Unit <GenReg_6>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenReg.vhd".
+    Found 21-bit register for signal <data_reg>.
+    Summary:
+	inferred  21 D-type flip-flop(s).
+Unit <GenReg_6> synthesized.
+
+
+Synthesizing Unit <GenReg_7>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenReg.vhd".
+    Found 6-bit register for signal <data_reg>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <GenReg_7> synthesized.
+
+
+Synthesizing Unit <GenRegFalling_1>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/GenRegFalling.vhd".
+    Found 32-bit register for signal <data_reg>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <GenRegFalling_1> synthesized.
+
+
+Synthesizing Unit <Gen_Shift_Reg_Falling>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Gen_Shift_Reg_Falling.vhd".
+    Found 11-bit register for signal <data>.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+Unit <Gen_Shift_Reg_Falling> synthesized.
+
+
+Synthesizing Unit <Clock_Mgt>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Clock_Mgt.vhd".
+Unit <Clock_Mgt> synthesized.
+
+
+Synthesizing Unit <Output_Port_MUX>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Output_Port_MUX.vhd".
+    Found 32-bit 4-to-1 multiplexer for signal <reg0>.
+    Found 32-bit 4-to-1 multiplexer for signal <reg1>.
+    Found 32-bit 4-to-1 multiplexer for signal <reg2>.
+    Found 32-bit 4-to-1 multiplexer for signal <reg3>.
+    Summary:
+	inferred 128 Multiplexer(s).
+Unit <Output_Port_MUX> synthesized.
+
+
+Synthesizing Unit <Keyboard>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/Keyboard.vhd".
+WARNING:Xst:646 - Signal <reg_out<10>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <reg_out<1:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 32-bit up counter for signal <count>.
+    Found 32-bit adder for signal <count$add0000> created at line 59.
+    Found 1-bit register for signal <ready>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <Keyboard> synthesized.
+
+
+Synthesizing Unit <IFetch>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/IF.vhd".
+WARNING:Xst:646 - Signal <alt_addr_reg_out<31:23>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 23-bit adder for signal <incremented_addr>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <IFetch> synthesized.
+
+
+Synthesizing Unit <ID>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/ID.vhd".
+WARNING:Xst:737 - Found 32-bit latch for signal <RAM_reg_data_to_MEMIO>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 5-bit comparator equal for signal <ALU_A_to_EX$cmp_eq0000> created at line 267.
+    Found 5-bit comparator equal for signal <ALU_A_to_EX$cmp_eq0001> created at line 268.
+    Found 5-bit comparator equal for signal <ALU_A_to_EX$cmp_eq0002> created at line 271.
+    Found 5-bit comparator equal for signal <ALU_B_to_EX$cmp_eq0000> created at line 285.
+    Found 5-bit comparator equal for signal <ALU_B_to_EX$cmp_eq0001> created at line 286.
+    Found 5-bit comparator equal for signal <ALU_B_to_EX$cmp_eq0002> created at line 289.
+    Found 32-bit 4-to-1 multiplexer for signal <arith_immediate>.
+    Found 32-bit 4-to-1 multiplexer for signal <displacement>.
+    Found 5-bit comparator equal for signal <RAM_reg_data_to_MEMIO$cmp_eq0000> created at line 304.
+    Found 5-bit comparator equal for signal <RAM_reg_data_to_MEMIO$cmp_eq0001> created at line 305.
+    Found 5-bit comparator equal for signal <RAM_reg_data_to_MEMIO$cmp_eq0002> created at line 308.
+    Summary:
+	inferred   9 Comparator(s).
+	inferred  64 Multiplexer(s).
+Unit <ID> synthesized.
+
+
+Synthesizing Unit <MEMIO>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/MEMIO.vhd".
+    Found 32-bit 4-to-1 multiplexer for signal <data_to_WB>.
+    Found 1-bit 16-to-1 multiplexer for signal <ipin_reg_data$mux0000> created at line 117.
+    Summary:
+	inferred  33 Multiplexer(s).
+Unit <MEMIO> synthesized.
+
+
+Synthesizing Unit <WB>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/WB.vhd".
+Unit <WB> synthesized.
+
+
+Synthesizing Unit <ConditionBlock>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/ConditionBlock.vhd".
+Unit <ConditionBlock> synthesized.
+
+
+Synthesizing Unit <EX>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/EX.vhd".
+Unit <EX> synthesized.
+
+
+Synthesizing Unit <OZ3>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Subsystems/OZ-3/OZ3.vhd".
+Unit <OZ3> synthesized.
+
+
+Synthesizing Unit <OZ3_System>.
+    Related source file is "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.vhd".
+WARNING:Xst:646 - Signal <OZ3_output_pins_sig<7:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <OZ3_ex_oport_3_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <OZ3_ex_oport_2_sig<31:16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <OZ3_ex_oport_1_sig<31:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <OZ3_ex_oport_0_sig<31:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <OZ3_System> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 8
+ 23-bit adder                                          : 1
+ 32-bit adder                                          : 6
+ 33-bit addsub                                         : 1
+# Counters                                             : 6
+ 32-bit up counter                                     : 6
+# Registers                                            : 79
+ 1-bit register                                        : 23
+ 11-bit register                                       : 1
+ 12-bit register                                       : 1
+ 16-bit register                                       : 4
+ 21-bit register                                       : 2
+ 23-bit register                                       : 1
+ 32-bit register                                       : 42
+ 33-bit register                                       : 1
+ 4-bit register                                        : 1
+ 6-bit register                                        : 3
+# Latches                                              : 4
+ 16-bit latch                                          : 1
+ 32-bit latch                                          : 1
+ 4-bit latch                                           : 2
+# Comparators                                          : 12
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 1
+ 5-bit comparator equal                                : 9
+# Multiplexers                                         : 12
+ 1-bit 16-to-1 multiplexer                             : 1
+ 32-bit 32-to-1 multiplexer                            : 3
+ 32-bit 4-to-1 multiplexer                             : 8
+# Tristates                                            : 1
+ 16-bit tristate buffer                                : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <reg_3> is unconnected in block <Output_Extender>.
+   It will be removed from the design.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_22> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_23> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_24> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_25> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_26> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_27> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_28> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_29> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_30> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_31> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_reg_3> (without init value) has a constant value of 0 in block <Ipin>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_reg_4> (without init value) has a constant value of 0 in block <Ipin>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_reg_5> (without init value) has a constant value of 0 in block <Ipin>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_reg_6> (without init value) has a constant value of 0 in block <Ipin>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_reg_7> (without init value) has a constant value of 0 in block <Ipin>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_reg_8> (without init value) has a constant value of 0 in block <Ipin>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_reg_9> (without init value) has a constant value of 0 in block <Ipin>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_reg_10> (without init value) has a constant value of 0 in block <Ipin>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_reg_11> (without init value) has a constant value of 0 in block <Ipin>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_reg_12> (without init value) has a constant value of 0 in block <Ipin>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_reg_13> (without init value) has a constant value of 0 in block <Ipin>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_reg_14> (without init value) has a constant value of 0 in block <Ipin>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_0> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_1> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_2> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_3> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_4> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_5> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_6> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_7> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_8> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_9> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_10> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_11> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_12> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_13> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_14> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_15> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_16> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_17> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_18> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_19> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_20> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <reg_file_0_21> has a constant value of 0 in block <rfile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <data_reg_23> of sequential type is unconnected in block <AltAddrReg>.
+WARNING:Xst:2677 - Node <data_reg_24> of sequential type is unconnected in block <AltAddrReg>.
+WARNING:Xst:2677 - Node <data_reg_25> of sequential type is unconnected in block <AltAddrReg>.
+WARNING:Xst:2677 - Node <data_reg_26> of sequential type is unconnected in block <AltAddrReg>.
+WARNING:Xst:2677 - Node <data_reg_27> of sequential type is unconnected in block <AltAddrReg>.
+WARNING:Xst:2677 - Node <data_reg_28> of sequential type is unconnected in block <AltAddrReg>.
+WARNING:Xst:2677 - Node <data_reg_29> of sequential type is unconnected in block <AltAddrReg>.
+WARNING:Xst:2677 - Node <data_reg_30> of sequential type is unconnected in block <AltAddrReg>.
+WARNING:Xst:2677 - Node <data_reg_31> of sequential type is unconnected in block <AltAddrReg>.
+WARNING:Xst:2677 - Node <data_reg_8> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_9> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_10> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_11> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_12> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_13> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_14> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_15> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_16> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_17> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_18> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_19> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_20> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_21> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_22> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_23> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_24> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_25> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_26> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_27> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_28> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_29> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_30> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_31> of sequential type is unconnected in block <reg_0>.
+WARNING:Xst:2677 - Node <data_reg_8> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_9> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_10> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_11> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_12> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_13> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_14> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_15> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_16> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_17> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_18> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_19> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_20> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_21> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_22> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_23> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_24> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_25> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_26> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_27> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_28> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_29> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_30> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_31> of sequential type is unconnected in block <reg_1>.
+WARNING:Xst:2677 - Node <data_reg_16> of sequential type is unconnected in block <reg_2>.
+WARNING:Xst:2677 - Node <data_reg_17> of sequential type is unconnected in block <reg_2>.
+WARNING:Xst:2677 - Node <data_reg_18> of sequential type is unconnected in block <reg_2>.
+WARNING:Xst:2677 - Node <data_reg_19> of sequential type is unconnected in block <reg_2>.
+WARNING:Xst:2677 - Node <data_reg_20> of sequential type is unconnected in block <reg_2>.
+WARNING:Xst:2677 - Node <data_reg_21> of sequential type is unconnected in block <reg_2>.
+WARNING:Xst:2677 - Node <data_reg_22> of sequential type is unconnected in block <reg_2>.
+WARNING:Xst:2677 - Node <data_reg_23> of sequential type is unconnected in block <reg_2>.
+WARNING:Xst:2677 - Node <data_reg_24> of sequential type is unconnected in block <reg_2>.
+WARNING:Xst:2677 - Node <data_reg_25> of sequential type is unconnected in block <reg_2>.
+WARNING:Xst:2677 - Node <data_reg_26> of sequential type is unconnected in block <reg_2>.
+WARNING:Xst:2677 - Node <data_reg_27> of sequential type is unconnected in block <reg_2>.
+WARNING:Xst:2677 - Node <data_reg_28> of sequential type is unconnected in block <reg_2>.
+WARNING:Xst:2677 - Node <data_reg_29> of sequential type is unconnected in block <reg_2>.
+WARNING:Xst:2677 - Node <data_reg_30> of sequential type is unconnected in block <reg_2>.
+WARNING:Xst:2677 - Node <data_reg_31> of sequential type is unconnected in block <reg_2>.
+WARNING:Xst:2677 - Node <data_10> of sequential type is unconnected in block <shift_reg>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 8
+ 23-bit adder                                          : 1
+ 32-bit adder                                          : 6
+ 33-bit addsub                                         : 1
+# Counters                                             : 6
+ 32-bit up counter                                     : 6
+# Registers                                            : 1574
+ Flip-Flops                                            : 1574
+# Latches                                              : 4
+ 16-bit latch                                          : 1
+ 32-bit latch                                          : 1
+ 4-bit latch                                           : 2
+# Comparators                                          : 12
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 1
+ 5-bit comparator equal                                : 9
+# Multiplexers                                         : 12
+ 1-bit 16-to-1 multiplexer                             : 1
+ 32-bit 32-to-1 multiplexer                            : 3
+ 32-bit 4-to-1 multiplexer                             : 8
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <reg_file_0_31> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_30> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_29> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_28> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_27> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_26> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_25> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_24> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_23> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_22> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_21> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_20> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_19> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_18> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_17> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_16> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_15> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_14> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_13> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_12> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_11> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_10> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_9> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_8> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_7> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_6> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_5> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_4> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_3> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_2> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_1> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <reg_file_0_0> has a constant value of 0 in block <RegFile>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance DCM_1 in unit Clock_Mgt of type DCM has been replaced by DCM_SP
+INFO:Xst:1901 - Instance DCM_2 in unit Clock_Mgt of type DCM has been replaced by DCM_SP
+INFO:Xst:1901 - Instance DCM_3 in unit Clock_Mgt of type DCM has been replaced by DCM_SP
+
+Optimizing unit <OZ3_System> ...
+
+Optimizing unit <Debouncer> ...
+
+Optimizing unit <output_pin_cntl> ...
+
+Optimizing unit <GenReg_1> ...
+
+Optimizing unit <GenReg_2> ...
+
+Optimizing unit <GenReg_3> ...
+
+Optimizing unit <GenRegFalling_2> ...
+
+Optimizing unit <GenRegFalling_3> ...
+
+Optimizing unit <RegFile> ...
+
+Optimizing unit <GenReg_4> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <GenReg_5> ...
+
+Optimizing unit <GenReg_6> ...
+
+Optimizing unit <GenRegFalling_1> ...
+
+Optimizing unit <Gen_Shift_Reg_Falling> ...
+
+Optimizing unit <Clock_Mgt> ...
+
+Optimizing unit <four_dig_7seg> ...
+
+Optimizing unit <Output_Port_MUX> ...
+
+Optimizing unit <Keyboard> ...
+
+Optimizing unit <IFetch> ...
+
+Optimizing unit <ID> ...
+
+Optimizing unit <MEMIO> ...
+
+Optimizing unit <OZ3> ...
+WARNING:Xst:1710 - FF/Latch <OZ3_inst/Iport/data_reg_26> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_27> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_28> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_29> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_30> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_31> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Ipin/data_reg_3> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Ipin/data_reg_4> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Ipin/data_reg_5> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Ipin/data_reg_6> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Ipin/data_reg_7> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Ipin/data_reg_8> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Ipin/data_reg_9> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Ipin/data_reg_10> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Ipin/data_reg_11> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Ipin/data_reg_12> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Ipin/data_reg_13> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Ipin/data_reg_14> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_8> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_9> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_10> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_11> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_12> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_13> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_14> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_15> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_16> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_17> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_18> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_19> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_20> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_21> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_22> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_23> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_24> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <OZ3_inst/Iport/data_reg_25> (without init value) has a constant value of 0 in block <OZ3_System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_8> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_9> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_10> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_11> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_12> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_13> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_14> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_15> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_16> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_17> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_18> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_19> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_20> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_21> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_22> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_23> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_24> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_25> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_26> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_27> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_28> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_29> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_30> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_0/data_reg_31> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_8> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_9> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_10> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_11> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_12> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_13> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_14> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_15> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_16> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_17> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_18> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_19> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_20> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_21> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_22> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_23> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_24> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_25> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_26> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_27> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_28> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_29> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_30> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_1/data_reg_31> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_2/data_reg_16> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_2/data_reg_17> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_2/data_reg_18> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_2/data_reg_19> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_2/data_reg_20> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_2/data_reg_21> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_2/data_reg_22> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_2/data_reg_23> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_2/data_reg_24> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_2/data_reg_25> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_2/data_reg_26> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_2/data_reg_27> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_2/data_reg_28> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_2/data_reg_29> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_2/data_reg_30> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_2/data_reg_31> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_0> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_1> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_2> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_3> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_4> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_5> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_6> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_7> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_8> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_9> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_10> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_11> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_12> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_13> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_14> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_15> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_16> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_17> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_18> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_19> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_20> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_21> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_22> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_23> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_24> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_25> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_26> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_27> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_28> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_29> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_30> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <Output_Extender/reg_3/data_reg_31> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <keyboard_cntl/shift_reg/data_10> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <OZ3_inst/IF_stage/AltAddrReg/data_reg_31> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <OZ3_inst/IF_stage/AltAddrReg/data_reg_30> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <OZ3_inst/IF_stage/AltAddrReg/data_reg_29> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <OZ3_inst/IF_stage/AltAddrReg/data_reg_28> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <OZ3_inst/IF_stage/AltAddrReg/data_reg_27> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <OZ3_inst/IF_stage/AltAddrReg/data_reg_26> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <OZ3_inst/IF_stage/AltAddrReg/data_reg_25> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <OZ3_inst/IF_stage/AltAddrReg/data_reg_24> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <OZ3_inst/IF_stage/AltAddrReg/data_reg_23> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <OZ3_inst/Opin/opin_reg_0> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <OZ3_inst/Opin/opin_reg_1> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <OZ3_inst/Opin/opin_reg_2> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <OZ3_inst/Opin/opin_reg_3> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <OZ3_inst/Opin/opin_reg_4> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <OZ3_inst/Opin/opin_reg_5> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <OZ3_inst/Opin/opin_reg_6> of sequential type is unconnected in block <OZ3_System>.
+WARNING:Xst:2677 - Node <OZ3_inst/Opin/opin_reg_7> of sequential type is unconnected in block <OZ3_System>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <OZ3_inst/MEMIO_stage/buf_1/data_reg_15> in Unit <OZ3_System> is equivalent to the following FF/Latch, which will be removed : <OZ3_inst/WB_stage/buf1/data_reg_3> 
+INFO:Xst:2261 - The FF/Latch <OZ3_inst/MEMIO_stage/buf_1/data_reg_17> in Unit <OZ3_System> is equivalent to the following FF/Latch, which will be removed : <OZ3_inst/WB_stage/buf1/data_reg_5> 
+INFO:Xst:2261 - The FF/Latch <OZ3_inst/MEMIO_stage/buf_1/data_reg_14> in Unit <OZ3_System> is equivalent to the following FF/Latch, which will be removed : <OZ3_inst/WB_stage/buf1/data_reg_2> 
+INFO:Xst:2261 - The FF/Latch <OZ3_inst/MEMIO_stage/buf_1/data_reg_16> in Unit <OZ3_System> is equivalent to the following FF/Latch, which will be removed : <OZ3_inst/WB_stage/buf1/data_reg_4> 
+INFO:Xst:2261 - The FF/Latch <OZ3_inst/MEMIO_stage/buf_1/data_reg_13> in Unit <OZ3_System> is equivalent to the following FF/Latch, which will be removed : <OZ3_inst/WB_stage/buf1/data_reg_1> 
+INFO:Xst:2261 - The FF/Latch <OZ3_inst/MEMIO_stage/buf_2/data_reg_17> in Unit <OZ3_System> is equivalent to the following FF/Latch, which will be removed : <OZ3_inst/WB_stage/buf2/data_reg_5> 
+INFO:Xst:2261 - The FF/Latch <OZ3_inst/MEMIO_stage/buf_2/data_reg_16> in Unit <OZ3_System> is equivalent to the following FF/Latch, which will be removed : <OZ3_inst/WB_stage/buf2/data_reg_4> 
+INFO:Xst:2261 - The FF/Latch <OZ3_inst/MEMIO_stage/buf_2/data_reg_15> in Unit <OZ3_System> is equivalent to the following FF/Latch, which will be removed : <OZ3_inst/WB_stage/buf2/data_reg_3> 
+INFO:Xst:2261 - The FF/Latch <OZ3_inst/MEMIO_stage/buf_2/data_reg_14> in Unit <OZ3_System> is equivalent to the following FF/Latch, which will be removed : <OZ3_inst/WB_stage/buf2/data_reg_2> 
+INFO:Xst:2261 - The FF/Latch <OZ3_inst/MEMIO_stage/buf_2/data_reg_13> in Unit <OZ3_System> is equivalent to the following FF/Latch, which will be removed : <OZ3_inst/WB_stage/buf2/data_reg_1> 
+Found area constraint ratio of 100 (+ 5) on block OZ3_System, actual ratio is 46.
+FlipFlop OZ3_inst/MEMIO_stage/buf_2/data_reg_8 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <OZ3_System> :
+	Found 3-bit shift register for signal <keyboard_cntl/shift_reg/data_2>.
+Unit <OZ3_System> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1572
+ Flip-Flops                                            : 1572
+# Shift Registers                                      : 1
+ 3-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : OZ3_System.ngr
+Top Level Output File Name         : OZ3_System
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 94
+
+Cell Usage :
+# BELS                             : 5558
+#      BUF                         : 4
+#      GND                         : 1
+#      INV                         : 17
+#      LUT1                        : 394
+#      LUT2                        : 259
+#      LUT3                        : 1678
+#      LUT3_D                      : 6
+#      LUT3_L                      : 3
+#      LUT4                        : 666
+#      LUT4_D                      : 6
+#      LUT4_L                      : 1
+#      MUXCY                       : 555
+#      MUXF5                       : 852
+#      MUXF6                       : 386
+#      MUXF7                       : 193
+#      MUXF8                       : 96
+#      VCC                         : 1
+#      XORCY                       : 440
+# FlipFlops/Latches                : 1629
+#      FDC                         : 3
+#      FDCE_1                      : 9
+#      FDE                         : 35
+#      FDE_1                       : 8
+#      FDR                         : 184
+#      FDRE                        : 219
+#      FDRE_1                      : 1096
+#      FDRS                        : 19
+#      LD                          : 32
+#      LDCP                        : 8
+#      LDE_1                       : 16
+# Shift Registers                  : 1
+#      SRL16E_1                    : 1
+# Clock Buffers                    : 10
+#      BUFG                        : 10
+# IO Buffers                       : 94
+#      IBUF                        : 14
+#      IBUFG                       : 1
+#      IOBUF                       : 16
+#      OBUF                        : 63
+# DCMs                             : 3
+#      DCM_SP                      : 3
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     2142  out of   4656    46%  
+ Number of Slice Flip Flops:           1622  out of   9312    17%  
+ Number of 4 input LUTs:               3031  out of   9312    32%  
+    Number used as logic:              3030
+    Number used as Shift registers:       1
+ Number of IOs:                          94
+ Number of bonded IOBs:                  94  out of    232    40%  
+    IOB Flip Flops:                       7
+ Number of GCLKs:                        10  out of     24    41%  
+ Number of DCMs:                          3  out of      4    75%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------------------------------------------------------------+---------------------------------------------------+-------+
+Clock Signal                                                                                          | Clock buffer(FF name)                             | Load  |
+------------------------------------------------------------------------------------------------------+---------------------------------------------------+-------+
+clock                                                                                                 | clk_mgt/DCM_1:CLK90+clk_mgt/DCM_3:CLKFX           | 16    |
+clock                                                                                                 | IBUFG+BUFG                                        | 163   |
+Debounce3/clk_190Hz                                                                                   | NONE(Debounce3/delay1)                            | 1     |
+Debounce2/clk_190Hz                                                                                   | NONE(Debounce2/delay1)                            | 1     |
+Debounce1/clk_190Hz                                                                                   | NONE(Debounce1/delay1)                            | 1     |
+Decoder/to_decoder_cmp_eq0000(Decoder/to_decoder_cmp_eq00001:O)                                       | NONE(*)(Decoder/to_decoder_3)                     | 8     |
+clock                                                                                                 | clk_mgt/DCM_1:CLKFX                               | 1287  |
+key_clock                                                                                             | IBUF+BUFG                                         | 42    |
+OZ3_inst/ID_stage/RAM_reg_data_to_MEMIO_not00001(OZ3_inst/ID_stage/RAM_reg_data_to_MEMIO_not0000_f5:O)| BUFG(*)(OZ3_inst/ID_stage/RAM_reg_data_to_MEMIO_0)| 32    |
+clock                                                                                                 | clk_mgt/DCM_1:CLKFX+clk_mgt/DCM_2:CLK2X           | 79    |
+------------------------------------------------------------------------------------------------------+---------------------------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------+--------------------------------+-------+
+Control Signal                                                 | Buffer(FF name)                | Load  |
+---------------------------------------------------------------+--------------------------------+-------+
+reset_IBUF_1(reset_IBUF_1:O)                                   | NONE(OZ3_inst/Opin/opin_reg_14)| 8     |
+reset                                                          | IBUF                           | 3     |
+Decoder/anodes_0__and0000(Decoder/anodes_or00001:O)            | NONE(Decoder/anodes_0)         | 1     |
+Decoder/anodes_0__or0000(Decoder/mux0000_cmp_eq00001:O)        | NONE(Decoder/anodes_0)         | 1     |
+Decoder/anodes_1__and0000(Decoder/anodes_1__and00001:O)        | NONE(Decoder/anodes_1)         | 1     |
+Decoder/anodes_1__or0000(Decoder/anodes_1__or00001:O)          | NONE(Decoder/anodes_1)         | 1     |
+Decoder/anodes_2__and0000(Decoder/anodes_2__and00001:O)        | NONE(Decoder/anodes_2)         | 1     |
+Decoder/anodes_2__or0000(Decoder/anodes_2__or00001:O)          | NONE(Decoder/anodes_2)         | 1     |
+Decoder/anodes_3__or0000(Decoder/anodes_3__or00001:O)          | NONE(Decoder/anodes_3)         | 1     |
+Decoder/to_decoder_0__and0000(Decoder/to_decoder_0__and00001:O)| NONE(Decoder/to_decoder_0)     | 1     |
+Decoder/to_decoder_0__and0001(Decoder/to_decoder_0__and00011:O)| NONE(Decoder/to_decoder_0)     | 1     |
+Decoder/to_decoder_1__and0000(Decoder/to_decoder_1__and00001:O)| NONE(Decoder/to_decoder_1)     | 1     |
+Decoder/to_decoder_1__and0001(Decoder/to_decoder_1__and00011:O)| NONE(Decoder/to_decoder_1)     | 1     |
+Decoder/to_decoder_2__and0000(Decoder/to_decoder_2__and00001:O)| NONE(Decoder/to_decoder_2)     | 1     |
+Decoder/to_decoder_2__and0001(Decoder/to_decoder_2__and00011:O)| NONE(Decoder/to_decoder_2)     | 1     |
+Decoder/to_decoder_3__and0000(Decoder/to_decoder_3__and00001:O)| NONE(Decoder/to_decoder_3)     | 1     |
+Decoder/to_decoder_3__and0001(Decoder/to_decoder_3__and00011:O)| NONE(Decoder/to_decoder_3)     | 1     |
+N0(XST_GND:G)                                                  | NONE(Decoder/anodes_3)         | 1     |
+keyboard_cntl/ready_and0000(keyboard_cntl/ready_and00001:O)    | NONE(keyboard_cntl/ready)      | 1     |
+---------------------------------------------------------------+--------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 12.819ns (Maximum Frequency: 78.010MHz)
+   Minimum input arrival time before clock: 9.633ns
+   Maximum output required time after clock: 7.037ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 12.819ns (frequency: 78.010MHz)
+  Total number of paths / destination ports: 251282 / 2755
+-------------------------------------------------------------------------
+Delay:               12.819ns (Levels of Logic = 35)
+  Source:            Decoder/clk_count_1 (FF)
+  Destination:       Decoder/disp_count_31 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: Decoder/clk_count_1 to Decoder/disp_count_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.622  Decoder/clk_count_1 (Decoder/clk_count_1)
+     LUT1:I0->O            1   0.704   0.000  Decoder/Madd_disp_count_add0000_cy<1>_rt (Decoder/Madd_disp_count_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  Decoder/Madd_disp_count_add0000_cy<1> (Decoder/Madd_disp_count_add0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<2> (Decoder/Madd_disp_count_add0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<3> (Decoder/Madd_disp_count_add0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<4> (Decoder/Madd_disp_count_add0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<5> (Decoder/Madd_disp_count_add0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<6> (Decoder/Madd_disp_count_add0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<7> (Decoder/Madd_disp_count_add0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<8> (Decoder/Madd_disp_count_add0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<9> (Decoder/Madd_disp_count_add0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<10> (Decoder/Madd_disp_count_add0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<11> (Decoder/Madd_disp_count_add0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<12> (Decoder/Madd_disp_count_add0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<13> (Decoder/Madd_disp_count_add0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<14> (Decoder/Madd_disp_count_add0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<15> (Decoder/Madd_disp_count_add0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<16> (Decoder/Madd_disp_count_add0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<17> (Decoder/Madd_disp_count_add0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<18> (Decoder/Madd_disp_count_add0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<19> (Decoder/Madd_disp_count_add0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<20> (Decoder/Madd_disp_count_add0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<21> (Decoder/Madd_disp_count_add0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<22> (Decoder/Madd_disp_count_add0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<23> (Decoder/Madd_disp_count_add0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<24> (Decoder/Madd_disp_count_add0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<25> (Decoder/Madd_disp_count_add0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<26> (Decoder/Madd_disp_count_add0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<27> (Decoder/Madd_disp_count_add0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Decoder/Madd_disp_count_add0000_cy<28> (Decoder/Madd_disp_count_add0000_cy<28>)
+     XORCY:CI->O           1   0.804   0.424  Decoder/Madd_disp_count_add0000_xor<29> (Decoder/disp_count_add0000<29>)
+     LUT4:I3->O            1   0.704   0.000  Decoder/disp_count_cmp_eq0000_wg_lut<5> (Decoder/disp_count_cmp_eq0000_wg_lut<5>)
+     MUXCY:S->O            1   0.864   0.455  Decoder/disp_count_cmp_eq0000_wg_cy<5> (Decoder/disp_count_cmp_eq0000_wg_cy<5>)
+     LUT3:I2->O           65   0.704   1.277  Decoder/disp_count_cmp_eq0000_wg_cy<7>1 (Decoder/disp_count_cmp_eq0000)
+     LUT4:I3->O            1   0.704   0.000  Decoder/disp_count_and0000_wg_lut<8> (Decoder/disp_count_and0000_wg_lut<8>)
+     MUXCY:S->O           32   0.736   1.262  Decoder/disp_count_and0000_wg_cy<8> (Decoder/disp_count_and0000)
+     FDRE:R                    0.911          Decoder/disp_count_0
+    ----------------------------------------
+    Total                     12.819ns (8.779ns logic, 4.040ns route)
+                                       (68.5% logic, 31.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'key_clock'
+  Clock period: 9.909ns (frequency: 100.923MHz)
+  Total number of paths / destination ports: 18002 / 82
+-------------------------------------------------------------------------
+Delay:               9.909ns (Levels of Logic = 35)
+  Source:            keyboard_cntl/count_1 (FF)
+  Destination:       keyboard_cntl/ready (FF)
+  Source Clock:      key_clock falling
+  Destination Clock: key_clock falling
+
+  Data Path: keyboard_cntl/count_1 to keyboard_cntl/ready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.591   0.622  keyboard_cntl/count_1 (keyboard_cntl/count_1)
+     LUT1:I0->O            1   0.704   0.000  keyboard_cntl/Madd_count_add0000_cy<1>_rt (keyboard_cntl/Madd_count_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  keyboard_cntl/Madd_count_add0000_cy<1> (keyboard_cntl/Madd_count_add0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<2> (keyboard_cntl/Madd_count_add0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<3> (keyboard_cntl/Madd_count_add0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<4> (keyboard_cntl/Madd_count_add0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<5> (keyboard_cntl/Madd_count_add0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<6> (keyboard_cntl/Madd_count_add0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<7> (keyboard_cntl/Madd_count_add0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<8> (keyboard_cntl/Madd_count_add0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<9> (keyboard_cntl/Madd_count_add0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<10> (keyboard_cntl/Madd_count_add0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<11> (keyboard_cntl/Madd_count_add0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<12> (keyboard_cntl/Madd_count_add0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<13> (keyboard_cntl/Madd_count_add0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<14> (keyboard_cntl/Madd_count_add0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<15> (keyboard_cntl/Madd_count_add0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<16> (keyboard_cntl/Madd_count_add0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<17> (keyboard_cntl/Madd_count_add0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<18> (keyboard_cntl/Madd_count_add0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<19> (keyboard_cntl/Madd_count_add0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<20> (keyboard_cntl/Madd_count_add0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<21> (keyboard_cntl/Madd_count_add0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<22> (keyboard_cntl/Madd_count_add0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<23> (keyboard_cntl/Madd_count_add0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<24> (keyboard_cntl/Madd_count_add0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<25> (keyboard_cntl/Madd_count_add0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<26> (keyboard_cntl/Madd_count_add0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<27> (keyboard_cntl/Madd_count_add0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<28> (keyboard_cntl/Madd_count_add0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<29> (keyboard_cntl/Madd_count_add0000_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  keyboard_cntl/Madd_count_add0000_cy<30> (keyboard_cntl/Madd_count_add0000_cy<30>)
+     XORCY:CI->O           1   0.804   0.424  keyboard_cntl/Madd_count_add0000_xor<31> (keyboard_cntl/count_add0000<31>)
+     LUT4:I3->O            1   0.704   0.000  keyboard_cntl/count_cmp_eq0000_wg_lut<7> (keyboard_cntl/count_cmp_eq0000_wg_lut<7>)
+     MUXCY:S->O           33   0.864   1.342  keyboard_cntl/count_cmp_eq0000_wg_cy<7> (keyboard_cntl/count_cmp_eq0000)
+     LUT2:I1->O            1   0.704   0.420  keyboard_cntl/ready_and00011 (keyboard_cntl/ready_and0001)
+     FDCE_1:CE                 0.555          keyboard_cntl/ready
+    ----------------------------------------
+    Total                      9.909ns (7.101ns logic, 2.808ns route)
+                                       (71.7% logic, 28.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'OZ3_inst/ID_stage/RAM_reg_data_to_MEMIO_not00001'
+  Clock period: 4.151ns (frequency: 240.906MHz)
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Delay:               4.151ns (Levels of Logic = 4)
+  Source:            OZ3_inst/ID_stage/RAM_reg_data_to_MEMIO_8 (LATCH)
+  Destination:       OZ3_inst/ID_stage/RAM_reg_data_to_MEMIO_8 (LATCH)
+  Source Clock:      OZ3_inst/ID_stage/RAM_reg_data_to_MEMIO_not00001 falling
+  Destination Clock: OZ3_inst/ID_stage/RAM_reg_data_to_MEMIO_not00001 falling
+
+  Data Path: OZ3_inst/ID_stage/RAM_reg_data_to_MEMIO_8 to OZ3_inst/ID_stage/RAM_reg_data_to_MEMIO_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.676   0.451  OZ3_inst/ID_stage/RAM_reg_data_to_MEMIO_8 (OZ3_inst/ID_stage/RAM_reg_data_to_MEMIO_8)
+     LUT4:I3->O            1   0.704   0.000  OZ3_inst/MEMIO_stage/Mmux_data_to_WB621 (OZ3_inst/MEMIO_stage/Mmux_data_to_WB62)
+     MUXF5:I1->O           4   0.321   0.666  OZ3_inst/MEMIO_stage/Mmux_data_to_WB62_f5 (OZ3_inst/MEMIO_bus_to_WB<8>)
+     LUT4:I1->O            1   0.704   0.000  OZ3_inst/ID_stage/RAM_reg_data_to_MEMIO_mux0003<8>39_F (N295)
+     MUXF5:I0->O           1   0.321   0.000  OZ3_inst/ID_stage/RAM_reg_data_to_MEMIO_mux0003<8>39 (OZ3_inst/ID_stage/RAM_reg_data_to_MEMIO_mux0003<8>)
+     LD:D                      0.308          OZ3_inst/ID_stage/RAM_reg_data_to_MEMIO_8
+    ----------------------------------------
+    Total                      4.151ns (3.034ns logic, 1.117ns route)
+                                       (73.1% logic, 26.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 1612 / 1531
+-------------------------------------------------------------------------
+Offset:              9.633ns (Levels of Logic = 4)
+  Source:            reset (PAD)
+  Destination:       OZ3_inst/IF_stage/AltAddrReg/data_reg_32 (FF)
+  Destination Clock: clock falling 0.1X
+
+  Data Path: reset to OZ3_inst/IF_stage/AltAddrReg/data_reg_32
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           455   1.218   1.396  reset_IBUF (reset_IBUF)
+     BUF:I->O            455   0.704   1.571  reset_IBUF_1 (reset_IBUF_1)
+     LUT2:I0->O            1   0.704   0.420  OZ3_inst/IF_stage/alt_addr_reg_r1 (OZ3_inst/IF_stage/alt_addr_reg_r)
+     BUFG:I->O            24   1.457   1.252  OZ3_inst/IF_stage/alt_addr_reg_r_buff (OZ3_inst/IF_stage/alt_addr_reg_r_buf)
+     FDRE_1:R                  0.911          OZ3_inst/IF_stage/AltAddrReg/data_reg_0
+    ----------------------------------------
+    Total                      9.633ns (4.994ns logic, 4.639ns route)
+                                       (51.8% logic, 48.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Debounce3/clk_190Hz'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.946ns (Levels of Logic = 1)
+  Source:            button_2 (PAD)
+  Destination:       Debounce3/delay1 (FF)
+  Destination Clock: Debounce3/clk_190Hz rising
+
+  Data Path: button_2 to Debounce3/delay1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  button_2_IBUF (button_2_IBUF)
+     FDC:D                     0.308          Debounce3/delay1
+    ----------------------------------------
+    Total                      1.946ns (1.526ns logic, 0.420ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Debounce2/clk_190Hz'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.946ns (Levels of Logic = 1)
+  Source:            button_1 (PAD)
+  Destination:       Debounce2/delay1 (FF)
+  Destination Clock: Debounce2/clk_190Hz rising
+
+  Data Path: button_1 to Debounce2/delay1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  button_1_IBUF (button_1_IBUF)
+     FDC:D                     0.308          Debounce2/delay1
+    ----------------------------------------
+    Total                      1.946ns (1.526ns logic, 0.420ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Debounce1/clk_190Hz'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.946ns (Levels of Logic = 1)
+  Source:            button_0 (PAD)
+  Destination:       Debounce1/delay1 (FF)
+  Destination Clock: Debounce1/clk_190Hz rising
+
+  Data Path: button_0 to Debounce1/delay1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  button_0_IBUF (button_0_IBUF)
+     FDC:D                     0.308          Debounce1/delay1
+    ----------------------------------------
+    Total                      1.946ns (1.526ns logic, 0.420ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'key_clock'
+  Total number of paths / destination ports: 43 / 43
+-------------------------------------------------------------------------
+Offset:              5.663ns (Levels of Logic = 3)
+  Source:            key_clock (PAD)
+  Destination:       keyboard_cntl/ready (FF)
+  Destination Clock: key_clock falling
+
+  Data Path: key_clock to keyboard_cntl/ready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.622  key_clock_IBUF (key_clock_IBUF1)
+     LUT2:I0->O           42   0.704   1.440  keyboard_cntl/enable1 (keyboard_cntl/enable)
+     LUT2:I0->O            1   0.704   0.420  keyboard_cntl/ready_and00011 (keyboard_cntl/ready_and0001)
+     FDCE_1:CE                 0.555          keyboard_cntl/ready
+    ----------------------------------------
+    Total                      5.663ns (3.181ns logic, 2.482ns route)
+                                       (56.2% logic, 43.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 140 / 60
+-------------------------------------------------------------------------
+Offset:              7.037ns (Levels of Logic = 2)
+  Source:            OZ3_inst/MEMIO_stage/buf_2/data_reg_2 (FF)
+  Destination:       memory_data_bus<15> (PAD)
+  Source Clock:      clock rising 0.1X
+
+  Data Path: OZ3_inst/MEMIO_stage/buf_2/data_reg_2 to memory_data_bus<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            27   0.591   1.436  OZ3_inst/MEMIO_stage/buf_2/data_reg_2 (OZ3_inst/MEMIO_stage/buf_2/data_reg_2)
+     LUT2:I0->O           16   0.704   1.034  mem_ctrl_inst/dRAM_WR_from_OZ3_inv1 (mem_ctrl_inst/dRAM_WR_from_OZ3_inv)
+     IOBUF:T->IO               3.272          memory_data_bus_15_IOBUF (memory_data_bus<15>)
+    ----------------------------------------
+    Total                      7.037ns (4.567ns logic, 2.470ns route)
+                                       (64.9% logic, 35.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Decoder/to_decoder_cmp_eq0000'
+  Total number of paths / destination ports: 32 / 11
+-------------------------------------------------------------------------
+Offset:              5.955ns (Levels of Logic = 2)
+  Source:            Decoder/to_decoder_0 (LATCH)
+  Destination:       decoder_out<6> (PAD)
+  Source Clock:      Decoder/to_decoder_cmp_eq0000 falling
+
+  Data Path: Decoder/to_decoder_0 to decoder_out<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCP:G->Q             7   0.676   0.883  Decoder/to_decoder_0 (Decoder/to_decoder_0)
+     LUT4:I0->O            1   0.704   0.420  Decoder/Mrom_to_display31 (decoder_out_3_OBUF)
+     OBUF:I->O                 3.272          decoder_out_3_OBUF (decoder_out<3>)
+    ----------------------------------------
+    Total                      5.955ns (4.652ns logic, 1.303ns route)
+                                       (78.1% logic, 21.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 51.00 secs
+Total CPU time to Xst completion: 50.93 secs
+ 
+--> 
+
+Total memory usage is 215100 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  316 (   0 filtered)
+Number of infos    :   17 (   0 filtered)
+

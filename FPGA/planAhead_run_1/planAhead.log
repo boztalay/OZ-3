@@ -1,0 +1,25 @@
+INFO: [HD-Application 1] Opened log file C:\Users\Ben\Desktop\Folders\FPGA\Projects\Current Projects\Systems\OZ-3_System\C:/Users/Ben/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/planAhead_run_1/planAhead.log
+INFO: [HD-Application 2] Opened journal file C:\Users\Ben\Desktop\Folders\FPGA\Projects\Current Projects\Systems\OZ-3_System\C:/Users/Ben/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+# PlanAhead v11.2
+# Build 46627 by hdbuild on Tue Jun  2 13:30:28 PDT 2009
+# Start of session at: 1/19/10 2:43:41 AM
+# Process ID: 3456
+#-----------------------------------------------------------
+INFO: [HD-RTPRIM 0] Parsing template file 'C:\Xilinx\11.1\ISE\data\projnav\templates\verilog.xml'
+INFO: [HD-RTPRIM 1] Finished parsing template file 'C:\Xilinx\11.1\ISE\data\projnav\templates\verilog.xml'
+INFO: [HD-RTPRIM 0] Parsing template file 'C:\Xilinx\11.1\ISE\data\projnav\templates\vhdl.xml'
+INFO: [HD-RTPRIM 1] Finished parsing template file 'C:\Xilinx\11.1\ISE\data\projnav\templates\vhdl.xml'
+INFO: [HD-RTPRIM 0] Parsing template file 'C:\Xilinx\11.1\ISE\data\projnav\templates\ucf.xml'
+INFO: [HD-RTPRIM 1] Finished parsing template file 'C:\Xilinx\11.1\ISE\data\projnav\templates\ucf.xml'
+Command> source {C:/Users/Ben/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/pa.fromNetlist.tcl}
+# hdi::project new -name OZ-3_System -dir C:/Users/Ben/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/planAhead_run_1 -netlist C:/Users/Ben/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ3_System.ngc -search_path  {C:/Users/Ben/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System} 
+INFO: [HD-EDIFIN 0] Parsing Edif File '.\.HDI-PlanAhead-3456-Awesome\ngc2edif\OZ3_System.edif'
+INFO: [HD-EDIFIN 1] Finished Parsing Edif File '.\.HDI-PlanAhead-3456-Awesome\ngc2edif\OZ3_System.edif'
+WARN: [HD-NETLIST 3] Netlist 'OZ3_System' is not ideal for floorplanning, since the cellview 'OZ3_System' defined in file 'OZ3_System.ngc' contains large number of primitives. Please consider enabling hierarchy in synthesis before floorplan. You can enable hierarchy in XST by setting '-keep_hierarchy=yes' or '-netlist_hierarchy=rebuilt' flags.
+# hdi::project setArch -name OZ-3_System -arch spartan3e
+# hdi::param set -name project.paUcfFile -svalue OZ3_System.ucf
+# hdi::floorplan new -name floorplan_1 -part xc3s500efg320-4 -project OZ-3_System
+INFO: [HD-ArchReader 14] Reading macro library C:\Xilinx\11.1\PlanAhead\parts\xilinx\spartan3e\hd_int_macros.edn
+INFO: [HD-EDIFIN 0] Parsing Edif File 'C:\Xilinx\11.1\PlanAhead\parts\xilinx\spartan3e\hd_int_macros.edn'
+INFO: [HD-EDIFIN 1] Finished Parsing Edif File 'C:\Xilinx\11.1\PlanAhead\parts\xilinx\spartan3e\hd_int_macros.edn'

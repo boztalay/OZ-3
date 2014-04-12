@@ -1,0 +1,35 @@
+
+****** PlanAhead v11.2
+  **** Build 46627 by hdbuild on Tue Jun  2 13:30:28 PDT 2009
+    ** Copyright 1986-1999, 2001-2009 Xilinx, Inc. All Rights Reserved.
+
+INFO: [HD-Licensing 0] Attempting to get a license: PlanAhead
+INFO: [HD-Licensing 1] Got a license: PlanAhead
+INFO: [HD-ArchReader 10] Loading parts and site information from C:\Xilinx\11.1\PlanAhead\parts\arch.xml
+INFO: [HD-RTPRIM 0] Parsing RTL primitives file 'C:\Xilinx\11.1\PlanAhead\parts\xilinx\rtl\prims\rtl_prims.xml'
+INFO: [HD-RTPRIM 1] Finished Parsing RTL primitives file 'C:\Xilinx\11.1\PlanAhead\parts\xilinx\rtl\prims\rtl_prims.xml'
+INFO: [HD-Application 1] Opened log file C:\Users\Ben\Desktop\Folders\FPGA\Projects\Current Projects\Systems\OZ-3_System\C:/Users/Ben/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/planAhead_run_1/planAhead.log
+INFO: [HD-Application 2] Opened journal file C:\Users\Ben\Desktop\Folders\FPGA\Projects\Current Projects\Systems\OZ-3_System\C:/Users/Ben/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/planAhead_run_1/planAhead.jou
+INFO: [HD-RTPRIM 0] Parsing template file 'C:\Xilinx\11.1\ISE\data\projnav\templates\verilog.xml'
+INFO: [HD-RTPRIM 1] Finished parsing template file 'C:\Xilinx\11.1\ISE\data\projnav\templates\verilog.xml'
+INFO: [HD-RTPRIM 0] Parsing template file 'C:\Xilinx\11.1\ISE\data\projnav\templates\vhdl.xml'
+INFO: [HD-RTPRIM 1] Finished parsing template file 'C:\Xilinx\11.1\ISE\data\projnav\templates\vhdl.xml'
+INFO: [HD-RTPRIM 0] Parsing template file 'C:\Xilinx\11.1\ISE\data\projnav\templates\ucf.xml'
+INFO: [HD-RTPRIM 1] Finished parsing template file 'C:\Xilinx\11.1\ISE\data\projnav\templates\ucf.xml'
+Release 11.3 - ngc2edif L.57 (nt64)
+Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.
+Reading design OZ3_System.ngc ...
+WARNING:NetListWriters:298 - No output is written to OZ3_System.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus OZ3_inst/IF_stage/AltAddrReg/data_reg<32
+   : 0> on block OZ3_System is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus OZ3_inst/MEMIO_control<20 : 0> on block
+   OZ3_System is not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file OZ3_System.edif ...
+System Administrator privileges are needed to install this software.
+ngc2edif: Total memory usage is 90192 kilobytes
+

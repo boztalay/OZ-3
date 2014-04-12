@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Gen_Latch_High.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Gen_Latch_High.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Gen_Latch_High.xst"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="OZ-3_System.ntrc_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BCD" xil_pn:name="OZ-3_System_xdb/cst.xbcd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="OZ3_System.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="OZ3_System.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="OZ3_System.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="OZ3_System.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="OZ3_System.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="OZ3_System.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="OZ3_System.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="OZ3_System.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="OZ3_System.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="OZ3_System.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="OZ3_System.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="OZ3_System.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="OZ3_System.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="OZ3_System.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="OZ3_System.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="OZ3_System.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="OZ3_System.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="OZ3_System.ut"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="OZ3_System.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="OZ3_System.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="OZ3_System_TB.fdo"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="OZ3_System_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="OZ3_System_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="OZ3_System_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="OZ3_System_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="OZ3_System_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="OZ3_System_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="OZ3_System_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="OZ3_System_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="OZ3_System_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="OZ3_System_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="OZ3_System_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="OZ3_System_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="OZ3_System_usage.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="OZ3_System_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="OZ3_System_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Output_Port_MUX.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Output_Port_MUX.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Output_Port_MUX.xst"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="oz3_system.bgn"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="oz3_system.bit"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="oz3_system.drc"/>
+    <file xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="smartpreview.twr"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_LOG" xil_pn:name="vsim.wlf"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="work"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1276367418" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1276367418">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1276489079" xil_pn:in_ck="-4503146225798926116" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1276489079">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/ALU.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/ConditionBlock.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/EX.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/GenReg.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/GenRegFalling.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/ID.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/IF.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/MEMIO.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/OZ3.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/RegFile.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/WB.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/output_pin_cntl.vhd"/>
+      <outfile xil_pn:name="Clock_Mgt.vhd"/>
+      <outfile xil_pn:name="Debouncer.vhd"/>
+      <outfile xil_pn:name="Gen_Latch_High.vhd"/>
+      <outfile xil_pn:name="Gen_Shift_Reg.vhd"/>
+      <outfile xil_pn:name="Gen_Shift_Reg_Falling.vhd"/>
+      <outfile xil_pn:name="Input_Port_MUX.vhd"/>
+      <outfile xil_pn:name="Keyboard.vhd"/>
+      <outfile xil_pn:name="Mem_Ctrl.vhd"/>
+      <outfile xil_pn:name="Mem_Ctrl_TB.vhd"/>
+      <outfile xil_pn:name="OZ3_System.vhd"/>
+      <outfile xil_pn:name="OZ3_System_TB.vhd"/>
+      <outfile xil_pn:name="OZ3_TB.vhd"/>
+      <outfile xil_pn:name="Output_Extender_TB.vhd"/>
+      <outfile xil_pn:name="Output_Port_MUX.vhd"/>
+      <outfile xil_pn:name="clk_mgt_TB.vhd"/>
+      <outfile xil_pn:name="four_dig_7seg.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1276488955" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-9044832904953873877" xil_pn:start_ts="1276488955">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1276488955" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3418866178078708973" xil_pn:start_ts="1276488955">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1276488955" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6834503620298301459" xil_pn:start_ts="1276488955">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1276489079" xil_pn:in_ck="-4503146225798926116" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1276489079">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/ALU.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/ConditionBlock.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/EX.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/GenReg.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/GenRegFalling.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/ID.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/IF.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/MEMIO.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/OZ3.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/RegFile.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/WB.vhd"/>
+      <outfile xil_pn:name="../../Subsystems/OZ-3/output_pin_cntl.vhd"/>
+      <outfile xil_pn:name="Clock_Mgt.vhd"/>
+      <outfile xil_pn:name="Debouncer.vhd"/>
+      <outfile xil_pn:name="Gen_Latch_High.vhd"/>
+      <outfile xil_pn:name="Gen_Shift_Reg.vhd"/>
+      <outfile xil_pn:name="Gen_Shift_Reg_Falling.vhd"/>
+      <outfile xil_pn:name="Input_Port_MUX.vhd"/>
+      <outfile xil_pn:name="Keyboard.vhd"/>
+      <outfile xil_pn:name="Mem_Ctrl.vhd"/>
+      <outfile xil_pn:name="Mem_Ctrl_TB.vhd"/>
+      <outfile xil_pn:name="OZ3_System.vhd"/>
+      <outfile xil_pn:name="OZ3_System_TB.vhd"/>
+      <outfile xil_pn:name="OZ3_TB.vhd"/>
+      <outfile xil_pn:name="Output_Extender_TB.vhd"/>
+      <outfile xil_pn:name="Output_Port_MUX.vhd"/>
+      <outfile xil_pn:name="clk_mgt_TB.vhd"/>
+      <outfile xil_pn:name="four_dig_7seg.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1276489081" xil_pn:in_ck="-4503146225798926116" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-5381934658173903121" xil_pn:start_ts="1276489079">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="OZ3_System_TB.fdo"/>
+      <outfile xil_pn:name="vsim.wlf"/>
+      <outfile xil_pn:name="work"/>
+    </transform>
+    <transform xil_pn:end_ts="1275619492" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="3418866178078708973" xil_pn:start_ts="1275619492">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1275619492" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="6834503620298301459" xil_pn:start_ts="1275619492">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1275619492" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1275619492">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1275619492" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-9044832904953873877" xil_pn:start_ts="1275619492">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1275619492" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:start_ts="1275619492">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1275619492" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="7427641400692966869" xil_pn:start_ts="1275619492">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1276499987" xil_pn:in_ck="5933501477539303972" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="436649931839323827" xil_pn:start_ts="1276499932">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="OZ-3_System.ntrc_log"/>
+      <outfile xil_pn:name="OZ3_System.cmd_log"/>
+      <outfile xil_pn:name="OZ3_System.lso"/>
+      <outfile xil_pn:name="OZ3_System.ngc"/>
+      <outfile xil_pn:name="OZ3_System.ngr"/>
+      <outfile xil_pn:name="OZ3_System.prj"/>
+      <outfile xil_pn:name="OZ3_System.stx"/>
+      <outfile xil_pn:name="OZ3_System.syr"/>
+      <outfile xil_pn:name="OZ3_System.xst"/>
+      <outfile xil_pn:name="OZ3_System_summary.html"/>
+      <outfile xil_pn:name="OZ3_System_vhdl.prj"/>
+      <outfile xil_pn:name="OZ3_System_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1276130295" xil_pn:in_ck="19642662533155820" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4699764124111849336" xil_pn:start_ts="1276130294">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="OZ-3_System_xdb/cst.xbcd"/>
+    </transform>
+    <transform xil_pn:end_ts="1276499996" xil_pn:in_ck="6617376478982055186" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-9171021517284809163" xil_pn:start_ts="1276499987">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="OZ3_System.bld"/>
+      <outfile xil_pn:name="OZ3_System.cmd_log"/>
+      <outfile xil_pn:name="OZ3_System.ngd"/>
+      <outfile xil_pn:name="OZ3_System_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1276500009" xil_pn:in_ck="-3278605034462932269" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1276499996">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="OZ3_System.pcf"/>
+      <outfile xil_pn:name="OZ3_System_map.map"/>
+      <outfile xil_pn:name="OZ3_System_map.mrp"/>
+      <outfile xil_pn:name="OZ3_System_map.ncd"/>
+      <outfile xil_pn:name="OZ3_System_map.ngm"/>
+      <outfile xil_pn:name="OZ3_System_map.xrpt"/>
+      <outfile xil_pn:name="OZ3_System_summary.xml"/>
+      <outfile xil_pn:name="OZ3_System_usage.xml"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1276500357" xil_pn:in_ck="1622304005471029292" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-8400824521058490543" xil_pn:start_ts="1276500009">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="OZ3_System.ncd"/>
+      <outfile xil_pn:name="OZ3_System.pad"/>
+      <outfile xil_pn:name="OZ3_System.par"/>
+      <outfile xil_pn:name="OZ3_System.ptwx"/>
+      <outfile xil_pn:name="OZ3_System.unroutes"/>
+      <outfile xil_pn:name="OZ3_System.xpi"/>
+      <outfile xil_pn:name="OZ3_System_pad.csv"/>
+      <outfile xil_pn:name="OZ3_System_pad.txt"/>
+      <outfile xil_pn:name="OZ3_System_par.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="smartpreview.twr"/>
+    </transform>
+    <transform xil_pn:end_ts="1276500372" xil_pn:in_ck="19642662533148195" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="287829442711806529" xil_pn:start_ts="1276500357">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="OZ3_System.ut"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="oz3_system.bgn"/>
+      <outfile xil_pn:name="oz3_system.bit"/>
+      <outfile xil_pn:name="oz3_system.drc"/>
+    </transform>
+    <transform xil_pn:end_ts="1276500357" xil_pn:in_ck="-6727874493102752945" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="9067365325683159964" xil_pn:start_ts="1276500349">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="OZ3_System.twr"/>
+      <outfile xil_pn:name="OZ3_System.twx"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+    </transform>
+  </transforms>
+
+</generated_project>

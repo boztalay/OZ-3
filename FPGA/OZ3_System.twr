@@ -1,0 +1,262 @@
+--------------------------------------------------------------------------------
+Release 11.1 Trace  (nt)
+Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\11.1\ISE\bin\nt\unwrapped\trce.exe -ise
+C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/OZ-3_System.ise
+-intstyle ise -v 3 -s 4 -fastpaths -xml OZ3_System.twx OZ3_System.ncd -o
+OZ3_System.twr OZ3_System.pcf -ucf OZ3_System.ucf
+
+Design file:              OZ3_System.ncd
+Physical constraint file: OZ3_System.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2009-03-03)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clock
+-------------------+------------+------------+------------------+--------+
+                   |  Setup to  |  Hold to   |                  | Clock  |
+Source             | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+-------------------+------------+------------+------------------+--------+
+memory_data_bus<0> |    0.241(F)|    1.490(F)|clock_1           |   0.000|
+                   |   -2.405(F)|    5.081(F)|clock_2           |   0.000|
+memory_data_bus<1> |    0.242(F)|    1.488(F)|clock_1           |   0.000|
+                   |   -1.815(F)|    4.426(F)|clock_2           |   0.000|
+memory_data_bus<2> |   -0.053(F)|    1.720(F)|clock_1           |   0.000|
+                   |   -2.430(F)|    4.806(F)|clock_2           |   0.000|
+memory_data_bus<3> |    0.235(F)|    1.490(F)|clock_1           |   0.000|
+                   |   -2.142(F)|    4.864(F)|clock_2           |   0.000|
+memory_data_bus<4> |    0.203(F)|    1.507(F)|clock_1           |   0.000|
+                   |   -1.622(F)|    4.646(F)|clock_2           |   0.000|
+memory_data_bus<5> |    0.150(F)|    1.549(F)|clock_1           |   0.000|
+                   |   -1.649(F)|    4.890(F)|clock_2           |   0.000|
+memory_data_bus<6> |    0.180(F)|    1.523(F)|clock_1           |   0.000|
+                   |   -2.191(F)|    4.906(F)|clock_2           |   0.000|
+memory_data_bus<7> |    1.219(F)|    0.692(F)|clock_1           |   0.000|
+                   |   -1.154(F)|    4.475(F)|clock_2           |   0.000|
+memory_data_bus<8> |   -0.006(F)|    1.684(F)|clock_1           |   0.000|
+                   |   -2.610(F)|    5.317(F)|clock_2           |   0.000|
+memory_data_bus<9> |    0.257(F)|    1.474(F)|clock_1           |   0.000|
+                   |   -2.379(F)|    4.644(F)|clock_2           |   0.000|
+memory_data_bus<10>|   -0.285(F)|    1.894(F)|clock_1           |   0.000|
+                   |   -2.685(F)|    5.068(F)|clock_2           |   0.000|
+memory_data_bus<11>|    0.021(F)|    1.650(F)|clock_1           |   0.000|
+                   |   -2.106(F)|    4.898(F)|clock_2           |   0.000|
+memory_data_bus<12>|   -0.245(F)|    1.873(F)|clock_1           |   0.000|
+                   |   -2.662(F)|    5.048(F)|clock_2           |   0.000|
+memory_data_bus<13>|    0.408(F)|    1.351(F)|clock_1           |   0.000|
+                   |   -1.431(F)|    4.062(F)|clock_2           |   0.000|
+memory_data_bus<14>|    0.217(F)|    1.493(F)|clock_1           |   0.000|
+                   |   -1.664(F)|    4.483(F)|clock_2           |   0.000|
+memory_data_bus<15>|    0.709(F)|    1.100(F)|clock_1           |   0.000|
+                   |   -1.185(F)|    4.092(F)|clock_2           |   0.000|
+reset              |    5.224(R)|    1.117(R)|clock_1           |   0.000|
+                   |    7.595(F)|    1.141(F)|clock_1           |   0.000|
+                   |    2.247(R)|    1.160(R)|clock_2           |   0.000|
+                   |    6.924(F)|    1.256(F)|clock_2           |   0.000|
+                   |    6.644(R)|   -0.264(R)|clock_IBUFG       |   0.000|
+switches<0>        |    0.173(R)|    1.538(R)|clock_1           |   0.000|
+switches<1>        |    0.131(R)|    1.571(R)|clock_1           |   0.000|
+switches<2>        |   -0.660(R)|    2.214(R)|clock_1           |   0.000|
+switches<3>        |   -0.399(R)|    2.005(R)|clock_1           |   0.000|
+switches<4>        |   -0.061(R)|    1.719(R)|clock_1           |   0.000|
+switches<5>        |   -0.184(R)|    1.817(R)|clock_1           |   0.000|
+switches<6>        |   -0.084(R)|    1.746(R)|clock_1           |   0.000|
+switches<7>        |    0.439(R)|    1.327(R)|clock_1           |   0.000|
+-------------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock key_clock
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+key_data    |   -0.285(F)|    2.099(F)|key_clock_IBUF    |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clock to Pad
+----------------------+------------+------------------+--------+
+                      | clk (edge) |                  | Clock  |
+Destination           |   to PAD   |Internal Clock(s) | Phase  |
+----------------------+------------+------------------+--------+
+LCD_E                 |    8.782(F)|clock_1           |   0.000|
+LCD_RS                |    8.849(F)|clock_1           |   0.000|
+LCD_RW                |   10.074(F)|clock_1           |   0.000|
+LCD_data_bus_out<0>   |    9.109(F)|clock_1           |   0.000|
+LCD_data_bus_out<1>   |    8.496(F)|clock_1           |   0.000|
+LCD_data_bus_out<2>   |    9.087(F)|clock_1           |   0.000|
+LCD_data_bus_out<3>   |    9.094(F)|clock_1           |   0.000|
+LCD_data_bus_out<4>   |    9.320(F)|clock_1           |   0.000|
+LCD_data_bus_out<5>   |    9.284(F)|clock_1           |   0.000|
+LCD_data_bus_out<6>   |    9.526(F)|clock_1           |   0.000|
+LCD_data_bus_out<7>   |    9.084(F)|clock_1           |   0.000|
+LEDs<0>               |    9.103(F)|clock_1           |   0.000|
+LEDs<1>               |    9.054(F)|clock_1           |   0.000|
+LEDs<2>               |    8.496(F)|clock_1           |   0.000|
+LEDs<3>               |    8.500(F)|clock_1           |   0.000|
+LEDs<4>               |   10.427(F)|clock_1           |   0.000|
+LEDs<5>               |    9.741(F)|clock_1           |   0.000|
+LEDs<6>               |   11.148(F)|clock_1           |   0.000|
+LEDs<7>               |   10.354(F)|clock_1           |   0.000|
+mem_oe                |   13.397(R)|clock_1           |   0.000|
+mem_we                |   12.718(R)|clock_1           |   0.000|
+memory_address_bus<0> |   12.602(R)|clock_1           |   0.000|
+                      |   13.657(R)|clock_2           |   0.000|
+memory_address_bus<1> |   11.982(R)|clock_1           |   0.000|
+                      |   14.044(R)|clock_2           |   0.000|
+memory_address_bus<2> |   13.856(R)|clock_1           |   0.000|
+                      |   14.599(R)|clock_2           |   0.000|
+memory_address_bus<3> |   14.178(R)|clock_1           |   0.000|
+                      |   14.510(R)|clock_2           |   0.000|
+memory_address_bus<4> |   14.659(R)|clock_1           |   0.000|
+                      |   13.661(R)|clock_2           |   0.000|
+memory_address_bus<5> |   13.769(R)|clock_1           |   0.000|
+                      |   14.886(R)|clock_2           |   0.000|
+memory_address_bus<6> |   13.938(R)|clock_1           |   0.000|
+                      |   14.032(R)|clock_2           |   0.000|
+memory_address_bus<7> |   13.360(R)|clock_1           |   0.000|
+                      |   14.453(R)|clock_2           |   0.000|
+memory_address_bus<8> |   13.179(R)|clock_1           |   0.000|
+                      |   14.668(R)|clock_2           |   0.000|
+memory_address_bus<9> |   13.173(R)|clock_1           |   0.000|
+                      |   14.860(R)|clock_2           |   0.000|
+memory_address_bus<10>|   11.982(R)|clock_1           |   0.000|
+                      |   15.282(R)|clock_2           |   0.000|
+memory_address_bus<11>|   12.062(R)|clock_1           |   0.000|
+                      |   14.512(R)|clock_2           |   0.000|
+memory_address_bus<12>|   13.049(R)|clock_1           |   0.000|
+                      |   14.282(R)|clock_2           |   0.000|
+memory_address_bus<13>|   12.415(R)|clock_1           |   0.000|
+                      |   14.650(R)|clock_2           |   0.000|
+memory_address_bus<14>|   13.486(R)|clock_1           |   0.000|
+                      |   14.802(R)|clock_2           |   0.000|
+memory_address_bus<15>|   12.091(R)|clock_1           |   0.000|
+                      |   15.382(R)|clock_2           |   0.000|
+memory_address_bus<16>|   13.337(R)|clock_1           |   0.000|
+                      |   14.476(R)|clock_2           |   0.000|
+memory_address_bus<17>|   13.520(R)|clock_1           |   0.000|
+                      |   14.840(R)|clock_2           |   0.000|
+memory_address_bus<18>|   14.364(R)|clock_1           |   0.000|
+                      |   15.338(R)|clock_2           |   0.000|
+memory_address_bus<19>|   13.839(R)|clock_1           |   0.000|
+                      |   14.852(R)|clock_2           |   0.000|
+memory_address_bus<20>|   11.325(R)|clock_1           |   0.000|
+                      |   14.451(R)|clock_2           |   0.000|
+memory_address_bus<21>|   13.552(R)|clock_1           |   0.000|
+                      |   15.349(R)|clock_2           |   0.000|
+memory_address_bus<22>|   11.216(R)|clock_1           |   0.000|
+                      |   14.271(R)|clock_2           |   0.000|
+memory_data_bus<0>    |   13.129(R)|clock_1           |   0.000|
+                      |   12.323(R)|dRAM_ce_OBUF      |   0.000|
+memory_data_bus<1>    |   13.353(R)|clock_1           |   0.000|
+                      |   12.344(R)|dRAM_ce_OBUF      |   0.000|
+memory_data_bus<2>    |   13.105(R)|clock_1           |   0.000|
+                      |   12.570(R)|dRAM_ce_OBUF      |   0.000|
+memory_data_bus<3>    |   13.352(R)|clock_1           |   0.000|
+                      |   12.293(R)|dRAM_ce_OBUF      |   0.000|
+memory_data_bus<4>    |   13.179(R)|clock_1           |   0.000|
+                      |   12.632(R)|dRAM_ce_OBUF      |   0.000|
+memory_data_bus<5>    |   13.435(R)|clock_1           |   0.000|
+                      |   12.484(R)|dRAM_ce_OBUF      |   0.000|
+memory_data_bus<6>    |   13.707(R)|clock_1           |   0.000|
+                      |   12.596(R)|dRAM_ce_OBUF      |   0.000|
+memory_data_bus<7>    |   13.936(R)|clock_1           |   0.000|
+                      |   12.493(R)|dRAM_ce_OBUF      |   0.000|
+memory_data_bus<8>    |   13.354(R)|clock_1           |   0.000|
+                      |   12.534(R)|dRAM_ce_OBUF      |   0.000|
+memory_data_bus<9>    |   13.604(R)|clock_1           |   0.000|
+                      |   12.620(R)|dRAM_ce_OBUF      |   0.000|
+memory_data_bus<10>   |   12.667(R)|clock_1           |   0.000|
+                      |   12.208(R)|dRAM_ce_OBUF      |   0.000|
+memory_data_bus<11>   |   13.206(R)|clock_1           |   0.000|
+                      |   12.522(R)|dRAM_ce_OBUF      |   0.000|
+memory_data_bus<12>   |   12.299(R)|clock_1           |   0.000|
+                      |   11.945(R)|dRAM_ce_OBUF      |   0.000|
+memory_data_bus<13>   |   13.450(R)|clock_1           |   0.000|
+                      |   12.562(R)|dRAM_ce_OBUF      |   0.000|
+memory_data_bus<14>   |   13.957(R)|clock_1           |   0.000|
+                      |   12.716(R)|dRAM_ce_OBUF      |   0.000|
+memory_data_bus<15>   |   14.772(R)|clock_1           |   0.000|
+                      |   12.497(R)|dRAM_ce_OBUF      |   0.000|
+----------------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |   15.553|    8.608|   11.371|    9.503|
+key_clock      |         |    4.374|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock key_clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+key_clock      |         |         |    2.969|    9.195|
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+----------------------+---------+
+Source Pad     |Destination Pad       |  Delay  |
+---------------+----------------------+---------+
+clock          |dRAM_ce               |   11.390|
+clock          |flash_ce              |   11.422|
+clock          |mem_oe                |   16.359|
+clock          |mem_we                |   15.553|
+clock          |memory_address_bus<0> |   14.749|
+clock          |memory_address_bus<1> |   14.395|
+clock          |memory_address_bus<2> |   15.376|
+clock          |memory_address_bus<3> |   14.650|
+clock          |memory_address_bus<4> |   15.844|
+clock          |memory_address_bus<5> |   16.317|
+clock          |memory_address_bus<6> |   15.250|
+clock          |memory_address_bus<7> |   14.917|
+clock          |memory_address_bus<8> |   15.922|
+clock          |memory_address_bus<9> |   15.974|
+clock          |memory_address_bus<10>|   15.647|
+clock          |memory_address_bus<11>|   15.343|
+clock          |memory_address_bus<12>|   15.661|
+clock          |memory_address_bus<13>|   14.780|
+clock          |memory_address_bus<14>|   15.490|
+clock          |memory_address_bus<15>|   15.146|
+clock          |memory_address_bus<16>|   15.734|
+clock          |memory_address_bus<17>|   16.209|
+clock          |memory_address_bus<18>|   15.583|
+clock          |memory_address_bus<19>|   14.777|
+clock          |memory_address_bus<20>|   14.215|
+clock          |memory_address_bus<21>|   15.563|
+clock          |memory_address_bus<22>|   14.500|
+---------------+----------------------+---------+
+
+
+Analysis completed Mon Jun 14 03:25:56 2010 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 184 MB
+
+
+

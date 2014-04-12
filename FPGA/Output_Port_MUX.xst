@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/georgecuris/Desktop/Folders/FPGA/Projects/Current Projects/Systems/OZ-3_System/xst"
+elaborate
+-ifn Output_Port_MUX.prj
+-ifmt mixed
