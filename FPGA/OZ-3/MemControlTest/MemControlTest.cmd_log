@@ -1,0 +1,1 @@
+xst -ise "E:/FPGA/Projects/Current Projects/Systems/OZ-3/MemControlTest/MemControlTest.ise" -intstyle ise -ifn "E:/FPGA/Projects/Current Projects/Systems/OZ-3/MemControlTest/MemControlTest.xst" -ofn "E:/FPGA/Projects/Current Projects/Systems/OZ-3/MemControlTest/MemControlTest.syr" 

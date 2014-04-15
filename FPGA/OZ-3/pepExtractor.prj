@@ -1,0 +1,12 @@
+work	ALU.vhd
+work	ConditionBlock.vhd
+work	EX.vhd
+work	GenReg.vhd
+work	GenRegFalling.vhd
+work	ID.vhd
+work	IF.vhd
+work	MEMIO.vhd
+work	OZ3.vhd
+work	RegFile.vhd
+work	WB.vhd
+work	output_pin_cntl.vhd
